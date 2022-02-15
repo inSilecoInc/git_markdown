@@ -1,0 +1,17 @@
+Package: placeholder
+Type: workshop
+Title: Workshop title
+Version: 0.0.0.9000
+Authors@R: c(
+  person("inSileco Inc.", role = c("aut", "cre"), email = "kevin.cazelles@insileco.io")
+  )
+Description: A template for our workshop presentations.
+Imports:
+  iseWorkshops,
+  palmerpenguins,
+  rmarkdown,
+  csasdown,
+  gert
+Remotes:
+  inSilecoInc/iseWorkshops,
+  pbs-assess/csasdown

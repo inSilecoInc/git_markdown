@@ -1,0 +1,166 @@
+---
+title: "Collaborate more"
+author: "inSileco Team"
+date: 2021-12-20
+output:
+  xaringan::moon_reader:
+    css: [default, rd.css, rd-font.css, "hygge"]
+    lib_dir: assets
+    seal: false
+    nature:
+      highlightStyle: dracula
+      countIncrementalSlides: false
+      beforeInit: "macros.js"
+---
+
+
+```{r setup, include = FALSE}
+source("_setup.R")
+# knitr::clean_cache(TRUE)
+htmltools::tagList(
+  xaringanExtra::use_clipboard(
+    button_text = "<i class=\"fa fa-clipboard\"></i>",
+    success_text = "<i class=\"fa fa-check\" style=\"color: #37abc8\"></i>",
+  ),
+  rmarkdown::html_dependency_font_awesome()
+)
+xaringanExtra::use_scribble()
+```
+
+
+class: title-slide, middle
+
+
+## .font100[Work more collaboratively in `r rp()`]
+
+## .font100[with `r gt()` & `r gh()`]
+
+
+<br>
+
+.instructors[
+  .font160[`r rp()` Learning & Development community]
+  <br><br><br><br>
+  .authors140[David Beauchesne, Kevin Cazelles & Steve Vissault]
+  <br><br>
+  `r format(Sys.time(), '%B %d, %Y')`
+  <br>
+  .font140[
+  [www.insileco.io/learning_git](https://www.insileco.io/learning_git/#1) [`r gh()`](https://github.com/inSilecoInc/learning_git)
+  <!-- [`r db()`](link_to_data) -->
+  <!-- [`r rfa("file-pdf")`](link_to_pdf_version) -->
+  ]
+]
+
+<br>
+<img src="img/logoW.png" width="120px"></img>
+.instructors[info@insileco.io]
+
+<br>
+
+.instructors[
+
+[![pages-build-deployment](https://github.com/inSilecoInc/learning_git/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/inSilecoInc/learning_git/actions/workflows/pages/pages-build-deployment)
+
+Content under [`r rfa("creative-commons")` `r rfa("creative-commons-by")`](https://creativecommons.org/licenses/by/4.0/) unless otherwise specified.]
+
+
+
+---
+
+class: inverse, center, middle
+
+# `r nf()` Introduction
+
+![:custom_hr]()
+
+## `r rfa("html5")` [Click here to view the slides.](_00_introduction.html)
+
+
+
+
+---
+
+class: inverse, center, middle
+
+# PART I
+
+![:custom_hr]()
+
+##  `r nf()` `r gt()`, `r gh()`, `r gl()`, etc.
+
+## `r rfa("html5")` [Click here to view the slides.](_01_overview.html)
+
+
+
+
+
+---
+
+class: inverse, center, middle
+
+# PART II
+
+![:custom_hr]()
+
+## `r gt()` basics
+
+## `r rfa("html5")` [Click here to view the slides.](_02_basic_git.html)
+
+
+
+
+
+---
+
+class: inverse, center, middle
+
+# PART III
+
+![:custom_hr]()
+
+## Local and remote
+
+## `r rfa("html5")` [Click here to view the slides.](_03_local_remote.html)
+
+
+---
+
+class: inverse, center, middle
+
+# PART IV
+
+![:custom_hr]()
+
+## GitHub repos & R Markdown
+
+## `r rfa("html5")` [Click here to view the slides.](_04_rmarkdown.html)
+
+
+
+---
+
+class: inverse, center, middle
+
+# PART V
+
+![:custom_hr]()
+
+## Pull requests & `csasdown`
+
+## `r rfa("html5")` [Click here to view the slides.](_05_csas.html)
+
+
+---
+
+class: inverse, center, middle
+
+# `r lc()` Practice (break-out groups)
+
+![:custom_hr]()
+
+## Module 1 `r rfa("html5")` [Click here to view the slides.](_z01_break_out.html)
+
+## Module 2 `r rfa("html5")` [Click here to view the slides.](_z02_break_out.html)
+
+## Module 3 `r rfa("html5")` [Click here to view the slides.](_z03_break_out.html)
