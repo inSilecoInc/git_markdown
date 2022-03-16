@@ -31,22 +31,19 @@ xaringanExtra::use_scribble()
 class: title-slide, middle
 
 
-## .font100[Work more collaboratively in `r rp()`]
+## .font100[Reproducible and collaborative]
 
-## .font100[with `r gt()` & `r gh()`]
-
+## .font100[reporting in `r rp()`: <img src="https://github.com/rstudio/rmarkdown/raw/main/man/figures/logo.png" style="vertical-align: middle;margin:10px" width="40px"></img>, `r gt()` & `r gh()`]
 
 <br>
 
 .instructors[
-  .font160[`r rp()` Learning & Development community]
-  <br><br><br><br>
   .authors140[David Beauchesne, Kevin Cazelles & Steve Vissault]
   <br><br>
   `r format(Sys.time(), '%B %d, %Y')`
   <br>
   .font140[
-  [www.insileco.io/learning_git](https://www.insileco.io/learning_git/#1) [`r gh()`](https://github.com/inSilecoInc/learning_git)
+  [www.insileco.io/git_markdown](https://www.insileco.io/git_markdown/#1) [`r gh()`](https://github.com/inSilecoInc/git_markdown)
   <!-- [`r db()`](link_to_data) -->
   <!-- [`r rfa("file-pdf")`](link_to_pdf_version) -->
   ]
