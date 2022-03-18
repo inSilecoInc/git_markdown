@@ -139,7 +139,7 @@ $ tree -a -L 1
 
 
 ---
-# How do I create a commit?à
+# How do I create a commit?
 
 --
 
