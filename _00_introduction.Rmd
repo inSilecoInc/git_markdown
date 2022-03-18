@@ -11,8 +11,6 @@ output:
       beforeInit: "macros.js"
 ---
 
-# Introduction
-
 ```{r setup_00, include = FALSE}
 source("_setup.R")
 # knitr::clean_cache(TRUE)
@@ -26,32 +24,12 @@ htmltools::tagList(
 xaringanExtra::use_scribble()
 ```
 
+# Working reproducibly and collaboratively
+
 
 
 ---
-# Working collaboratively
-
-## Why?
-
-
-- only way to achieve our goals
-
-- complementarity (skills, experience, etc)
-
-- efficiency
-
-
---
-
-## How?
-
-- meetings (of all kind)
-
-- sharing documents (of all kind)
-
---
-
-  - **sharing code** (say `r rp()` code or a RMD document)
+# Writing dynamic documents
 
 
 
@@ -81,6 +59,34 @@ xaringanExtra::use_scribble()
 
 
 ---
+# `r gt()` in a nutshell 
+
+
+### - `r gt()` is a fully distributed version control system
+
+--
+
+### - `r gt()` was originally developed by developers of the Linux kernel to [develop the kernel](https://github.com/torvalds/linux)
+
+--
+
+### - 01/06 v1.0; 05/14 ve2.0; 01/22 [v2.35](https://github.blog/2022-01-24-highlights-from-git-2-35/)
+
+### - 2005 Linux Kernel developers needed a new tool to replace [BitKeeper](https://en.wikipedia.org/wiki/BitKeeper)
+
+
+---
+# `r gt()` in a nutshell 
+
+### - `r gt()` is fast and allow for non-linear develop via a killer branching system.
+
+--
+
+### - `r gt()` creates snapshots of a file system ("commits") stored in a local database `.git` that can be shared.
+
+
+
+---
 # Learning objectives
 
 
@@ -96,7 +102,7 @@ xaringanExtra::use_scribble()
 
 --
 
-### Use [<img src="img/rmarkdown.png" style="vertical-align: middle;margin:10px" width="50px"></img>](https://rmarkdown.rstudio.com/) to create documents and expose them on `r gh()`
+### Use [<img src="https://raw.githubusercontent.com/rstudio/rmarkdown/main/man/figures/logo.png" style="vertical-align: middle;margin:10px" width="50px"></img>](https://rmarkdown.rstudio.com/) to create documents and expose them on `r gh()`
 
 --
 

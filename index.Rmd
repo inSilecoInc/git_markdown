@@ -84,41 +84,10 @@ class: inverse, center, middle
 
 ![:custom_hr]()
 
-##  `r nf()` `r gt()`, `r gh()`, `r gl()`, etc.
+##  Learning `r gt()`
 
-## `r rfa("html5")` [Click here to view the slides.](_01_overview.html)
+## `r rfa("html5")` [Click here to view the slides.](_01_learning_git.html)
 
-
-
-
-
----
-
-class: inverse, center, middle
-
-# PART II
-
-![:custom_hr]()
-
-## `r gt()` basics
-
-## `r rfa("html5")` [Click here to view the slides.](_02_basic_git.html)
-
-
-
-
-
----
-
-class: inverse, center, middle
-
-# PART III
-
-![:custom_hr]()
-
-## Local and remote
-
-## `r rfa("html5")` [Click here to view the slides.](_03_local_remote.html)
 
 
 ---

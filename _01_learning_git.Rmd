@@ -30,62 +30,8 @@ xaringanExtra::use_scribble()
 
 
 
----
-#  In this part, we will...
-
---
-
-## learn what are `r gt()`, `r gh()` and `r gl()`;
-
---
-
-## get a basic understanding of how `r gt()` works.
 
 
-
----
-# Key resources
-
-.center[![:scale 30%](https://git-scm.com/images/progit2.png)]
-
-- `r lk()` S. Chacon & B. Straub (2014), Pro Git https://git-scm.com/book/en/v2
-- `r gh()` https://github.com/progit/progit2
-- `r bk()` https://github.com/progit/progit2/releases/tag/2.1.336
-
-
----
-# Key resources
-
-.center[![:scale 90%](img/part1/happygit.png)]
-
-- `r lk()` J. Bryan (2022), Happy git with R https://happygitwithr.com/
-
----
-# Key resources
-
-.center[![:scale 30%](img/part1/so_cover.jpeg)]
-
-- `r lk()` https://tra38.gitbooks.io/essential-copying-and-pasting-from-stack-overflow/content/
-- `r so()` https://stackoverflow.com/
-
-
-
----
-
-class: inverse, center, middle
-
-# Genesis
-
-![:custom_hr]()
-
-## The genesis of `r gt()`
-
-
-
----
-# Genesis
-
-### - 2005 Linux Kernel developers needed a new tool to replace [BitKeeper](https://en.wikipedia.org/wiki/BitKeeper)
 
 --
 
@@ -163,7 +109,7 @@ class: inverse, center, middle
 
 ![:custom_hr]()
 
-## `r gt()` is a distributed version control system
+## `r gt()` is a fully distributed version control system
 
 ---
 # Version Control Systems (VCS)
@@ -544,8 +490,44 @@ class: inverse, center, middle
 ### makes collaboration easy by allowing sharing and synchronizing `.git` folder between local and remote repositories.
 
 
+
+
 ---
+
+class: inverse, center, middle
+
 # Resources
+
+![:custom_hr]()
+
+
+---
+# Key resources
+
+.center[![:scale 30%](https://git-scm.com/images/progit2.png)]
+
+- `r lk()` S. Chacon & B. Straub (2014), Pro Git https://git-scm.com/book/en/v2
+- `r gh()` https://github.com/progit/progit2
+- `r bk()` https://github.com/progit/progit2/releases/tag/2.1.336
+
+
+---
+# Key resources
+
+.center[![:scale 90%](img/part1/happygit.png)]
+
+- `r lk()` J. Bryan (2022), Happy git with R https://happygitwithr.com/
+
+---
+# Key resources
+
+.center[![:scale 30%](img/part1/so_cover.jpeg)]
+
+- `r lk()` https://tra38.gitbooks.io/essential-copying-and-pasting-from-stack-overflow/content/
+- `r so()` https://stackoverflow.com/
+
+
+
 
 ### Books
 
