@@ -1,5 +1,5 @@
 ---
-title: "Overview"
+title: "Learning git"
 output:
   xaringan::moon_reader:
     css: [default, rd.css, rd-font.css, "hygge"]
@@ -76,11 +76,10 @@ class: inverse, center, middle
 ```sh
 $ tree -a -L 1 
 .
-├── _01_git_github.Rmd
-├── _02_basic_git_actions.Rmd
-├── _03_beyond_pppp.Rmd
-├── _04_rmarkdown.Rmd
-├── _05_csas.Rmd
+├── _00_introduction.Rmd
+├── _01_learning_git.Rmd
+├── _03_learning_rmarkdown.Rmd
+├── _04_working_together.Rmd
 ├── DESCRIPTION
 ├── .git
 ├── .github
@@ -140,10 +139,11 @@ $ tree -a -L 1
 
 
 ---
-# How do I create a commit?
+# How do I create a commit?à
 
+--
 
-### 1. Initiate the repository (`git init`)
+### 1. Initiate the repository (`git init`; create `.git`)
 
 --
 
@@ -151,16 +151,15 @@ $ tree -a -L 1
 
 --
 
-### 3. Stage the modifications to be committed (`git add`)
+### 3. Stage the modifications to be committed (`git add`; add selected files to the staging areas)
 
 --
 
-### 4. Create a new commit object (`git commit`)
+### 4. Create a new commit object (`git commit`; add the commit to `.git`)
 
 --
 
 ### 5. Go back to step 2.
-
 
 
 ---
@@ -169,7 +168,172 @@ $ tree -a -L 1
 ### 2 pieces of advice 
 
 - Use `git status` 
-- Keep this in mind `r ar()` https://ndpsoftware.com/git-cheatsheet.html#loc=index;
+- Keep this in mind `r ar()` https://ndpsoftware.com/git-cheatsheet.html#loc=index.
+
+
+
+
+
+
+
+
+---
+class: inverse, center, middle
+
+# Branching
+
+![:custom_hr]()
+
+## `r gt()` killer feature
+
+
+---
+# Branching
+
+## 1. Branch, branch and branch! 
+
+--
+
+## 2. Use `git branch` a lot!
+
+<br>
+
+--
+
+### - Branching allows you to create divergent history which is exactly what you need for collaboration.
+
+### - Branch is cheap.
+
+---
+# Branching
+
+```sh
+$ git branch topicA
+$ git switch topicA
+#> Switched to branch 'topicA'
+```
+
+---
+# How `r gt()` works 
+
+.center[![:scale 90%](img/part2/br_1.png)]
+
+
+---
+# How `r gt()` works - branch
+
+.center[![:scale 90%](img/part2/br_2.png)]
+
+
+---
+# How `r gt()` works - switch 
+
+.center[![:scale 90%](img/part2/br_3.png)]
+
+
+---
+# How `r gt()` works - commit
+
+.center[![:scale 90%](img/part2/br_4.png)]
+
+
+
+---
+# Merging `git merge`
+
+```sh
+$ git switch main 
+$ git merge topicA 
+#> Updating 64ee016..aadf541
+#> Fast-forward
+#>  seq_ncol.R | 1 +
+#>  1 file changed, 1 insertion(+)
+#>  create mode 100644 seq_ncol.R
+```
+
+
+
+---
+# How `r gt()` works - commit
+
+.center[![:scale 90%](img/part2/br_4.png)]
+
+
+---
+# How `r gt()` works - switch 
+
+.center[![:scale 90%](img/part2/br_5.png)]
+
+
+---
+# How `r gt()` works - merge (fast forward)
+
+.center[![:scale 90%](img/part2/br_6.png)]
+
+???
+now let's use references (refs) for pointers and objects for objets
+
+---
+# Not always as simple! 
+
+.center[![:scale 90%](img/part2/br2_1.png)]
+
+---
+# How `r gt()` works - commit
+
+.center[![:scale 90%](img/part2/br2_2.png)]
+
+---
+# How `r gt()` works - merge commit
+
+.center[![:scale 90%](img/part2/br2_3.png)]
+
+
+---
+# `r lc()` Let's do this 
+ 
+### 5 pieces of advice 
+
+- List your branch with `git branch`
+- Use `git status` 
+- Use `git log`
+- Keep this in mind `r ar()` https://ndpsoftware.com/git-cheatsheet.html#loc=index.
+- Once a branch is merges, delete it `git branch -d topicA`
+
+
+
+
+
+---
+# Rebasing 
+
+---
+# How `r gt()` works 
+
+.center[![:scale 90%](img/part2/reb_1.png)]
+
+---
+# How `r gt()` works - rebase
+
+.center[![:scale 90%](img/part2/reb_2.png)]
+
+---
+# How `r gt()` works - rebase
+
+.center[![:scale 90%](img/part2/reb_3.png)]
+
+---
+# How `r gt()` works - merge (fast forward)
+
+.center[![:scale 90%](img/part2/reb_4.png)]
+
+
+---
+# `r lc()` Let's do this 
+
+## Rebase a branch. 
+
+
 
 
 
@@ -185,7 +349,7 @@ class: inverse, center, middle
 
 ![:custom_hr]()
 
-## `r gh()` & `r gl()`
+## Use `r gh()`
 
 
 
@@ -230,6 +394,18 @@ class: inverse, center, middle
 --
 
 ### GitHub in numbers https://octoverse.github.com/
+
+
+---
+# `r lc()` Let's do this 
+ 
+### 3 pieces of advice 
+
+- Branch a lot,
+- Use the main/master branch as the sync branch,
+- Keep this in mind `r ar()` https://ndpsoftware.com/git-cheatsheet.html#loc=index.
+
+
 
 
 
