@@ -160,7 +160,7 @@ class: inverse, center, middle
 ---
 # Basic workflow 
 
-### 1. Initiate the repository (`git init`)
+### 1. Initiate the repository (`git init`; create `.git`)
 
 --
 
@@ -168,11 +168,11 @@ class: inverse, center, middle
 
 --
 
-### 3. Stage the modifications to be committed (`git add`)
+### 3. Stage the modifications to be committed (`git add`; add selected files to the staging areas)
 
 --
 
-### 4. Create a new commit object (`git commit`)
+### 4. Create a new commit object (`git commit`; add the commit to `.git`)
 
 --
 
