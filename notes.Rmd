@@ -1,0 +1,119 @@
+mkdir proj1
+cd proj1
+git init
+echo "# Our great project" > README.md
+echo "This is a great project" >> README.md 
+git add README.md 
+git commit -m "Add our README"
+echo "seq_nrow <- function(x) seq_len(NROW(x))" > seq_nrow.R
+git add seq_nrow.R
+git commit -m "Add seq_nrow()"
+echo "Cool seq_nrow() function" >> README.md
+git add README.md
+git commit -m "Improve the documentation"
+
+git switch -c topicA
+echo "seq_ncol <- function(x) seq_len(NCOL(x))" > seq_ncol.R
+git add seq_ncol.R
+git commit -m "Add seq_ncol()"
+git switch main 
+git merge topicA
+
+git switch -d HEAD~2
+git switch -c topicB
+echo "one more line" >> README.md
+git add README.md
+git commit -m "Improve documentation"
+git switch main
+git merge topicB
+git merge -Xours topicB 
+
+git reset --hard HEAD~1
+git merge topic --abort
+git switch topicB
+git rebase main 
+
+
+
+
+
+## Rewrite the history
+
+
+`git rebase -i`
+
+
+- https://learngitbranching.js.org/
+https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-git-large-file-storage
+
+avoid large file there are alternative options 
+https://git-lfs.github.com/
+
+- https://git-lfs.github.com/
+- https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github
+
+## Adance gh gh cli 
+
+
+
+<!-- 
+."Capitalized, short (50 chars or less) summary
+
+More detailed explanatory text, if necessary.  Wrap it to about 72
+characters or so.  In some contexts, the first line is treated as the
+subject of an email and the rest of the text as the body.  The blank
+line separating the summary from the body is critical (unless you omit
+the body entirely); tools like rebase will confuse you if you run the
+two together.
+
+Write your commit message in the imperative: "Fix bug" and not "Fixed bug"
+or "Fixes bug."  This convention matches up with commit messages generated
+by commands like git merge and git revert.
+
+Further paragraphs come after blank lines.
+
+- Bullet points are okay, too
+
+- Typically a hyphen or asterisk is used for the bullet, followed by a
+  single space, with blank lines in between, but conventions vary here
+
+- Use a hanging indent"
+
+
+https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html
+
+ As a general rule, your messages should start with a single line that’s no more than about 50 characters and that describes the changeset concisely, followed by a blank lin
+  followed by a blank line, followed by a more detailed explanation. 
+ 
+
+ 
+ https://git-send-email.io/#step-1
+ 
+  -->
+
+## Break-out 1 
+
+<!-- worth talking to C.G. beforehand -->
+<!-- shoul we create a index now? -->
+- Create a local git repository 
+- Creates two commits 
+- Create a branch 
+- Fast forward 
+- Create a situation where you have a conflict
+- Try rebasing 
+
+
+- 
+
+- Set up a repository up to the first push. 
+
+- Try to create a branch 
+
+- Then invite somebody create a branch and push it. 
+
+- Create a pull request review a pull request 
+
+- Clone common repository add your own branch
+
+- Create a fork of demogit/or the one on  and add something then open a pull  request.
+

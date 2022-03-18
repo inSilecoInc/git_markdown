@@ -1,0 +1,111 @@
+---
+title: "Introduction"
+output:
+  xaringan::moon_reader:
+    css: [default, rd.css, rd-font.css, "hygge"]
+    lib_dir: assets
+    seal: false
+    nature:
+      highlightStyle: dracula
+      countIncrementalSlides: false
+      beforeInit: "macros.js"
+---
+
+```{r setup_00, include = FALSE}
+source("_setup.R")
+# knitr::clean_cache(TRUE)
+htmltools::tagList(
+  xaringanExtra::use_clipboard(
+    button_text = "<i class=\"fa fa-clipboard\"></i>",
+    success_text = "<i class=\"fa fa-check\" style=\"color: #37abc8\"></i>",
+  ),
+  rmarkdown::html_dependency_font_awesome()
+)
+xaringanExtra::use_scribble()
+```
+
+# Working reproducibly and collaboratively
+
+
+
+---
+# Writing dynamic documents
+
+
+
+---
+# Sharing code
+
+--
+
+### - It's about keeping track of different versions of the code
+
+--
+
+### - Developers have been doing this for decades now
+
+--
+
+### - They have created great tools for this
+
+--
+
+### - `r gt()` is (probably) the most popular
+
+--
+
+### - `r gh()` is the largest host for `r gt()` repositories
+
+
+
+---
+# `r gt()` in a nutshell 
+
+
+### - `r gt()` is a fully distributed version control system
+
+--
+
+### - `r gt()` was originally developed by developers of the Linux kernel to [develop the kernel](https://github.com/torvalds/linux)
+
+--
+
+### - 01/06 v1.0; 05/14 ve2.0; 01/22 [v2.35](https://github.blog/2022-01-24-highlights-from-git-2-35/)
+
+### - 2005 Linux Kernel developers needed a new tool to replace [BitKeeper](https://en.wikipedia.org/wiki/BitKeeper)
+
+
+---
+# `r gt()` in a nutshell 
+
+### - `r gt()` is fast and allow for non-linear develop via a killer branching system.
+
+--
+
+### - `r gt()` creates snapshots of a file system ("commits") stored in a local database `.git` that can be shared.
+
+
+
+---
+# Learning objectives
+
+
+### Learn about `r gt()`  and `r gh()`
+
+--
+
+### Understand how `r gt()` works
+
+--
+
+### Be able to use `r gt()`  and `r gh()` to collaborate
+
+--
+
+### Use [<img src="https://raw.githubusercontent.com/rstudio/rmarkdown/main/man/figures/logo.png" style="vertical-align: middle;margin:10px" width="50px"></img>](https://rmarkdown.rstudio.com/) to create documents and expose them on `r gh()`
+
+--
+
+### Collaborate efficiently on a CSAS document using [csasdown `r rp()` package](https://github.com/pbs-assess/csasdown)
+
+
