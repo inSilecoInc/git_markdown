@@ -84,23 +84,9 @@ class: inverse, center, middle
 
 ![:custom_hr]()
 
-##  Learning `r gt()`
+## Work with `r gt()`
 
-## `r rfa("html5")` [Click here to view the slides.](_01_learning_git.html)
-
-
-
----
-
-class: inverse, center, middle
-
-# PART IV
-
-![:custom_hr]()
-
-## GitHub repos & R Markdown
-
-## `r rfa("html5")` [Click here to view the slides.](_04_rmarkdown.html)
+## `r rfa("html5")` [Click here to view the slides.](_01_git.html)
 
 
 
@@ -108,25 +94,38 @@ class: inverse, center, middle
 
 class: inverse, center, middle
 
-# PART V
+# PART II
 
 ![:custom_hr]()
 
-## Pull requests & `csasdown`
+## Work with R Markdown
 
-## `r rfa("html5")` [Click here to view the slides.](_05_csas.html)
+## `r rfa("html5")` [Click here to view the slides.](_02_rmarkdown.html)
+
 
 
 ---
 
 class: inverse, center, middle
 
-# `r lc()` Practice (break-out groups)
+# PART III
 
 ![:custom_hr]()
 
-## Module 1 `r rfa("html5")` [Click here to view the slides.](_z01_break_out.html)
+## Work together
 
-## Module 2 `r rfa("html5")` [Click here to view the slides.](_z02_break_out.html)
+## `r rfa("html5")` [Click here to view the slides.](_03_work_together.html)
 
-## Module 3 `r rfa("html5")` [Click here to view the slides.](_z03_break_out.html)
+
+---
+
+class: inverse, center, middle
+
+# `r lc()` Part IV
+
+![:custom_hr]()
+
+## Practice
+
+## `r rfa("html5")` [Click here to view the slides.](_04_practice.html)
+

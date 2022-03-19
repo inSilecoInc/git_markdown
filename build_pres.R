@@ -3,9 +3,10 @@ icons::download_fontawesome()
 
 parts = c(
   "_00_introduction.Rmd", 
-  "_01_learning_git.Rmd",
-  "_04_rmarkdown.Rmd",
-  "_05_csas.Rmd",
+  "_01_git.Rmd",
+  "_02_rmarkdown.Rmd",
+  "_03_work_together.Rmd",
+  "_04_practice.Rmd",
   "index.Rmd")
 
 for (i in parts) {

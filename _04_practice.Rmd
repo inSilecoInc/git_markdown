@@ -1,0 +1,77 @@
+---
+title: "Module 3"
+output:
+  xaringan::moon_reader:
+    css: [default, rd.css, rd-font.css, "hygge"]
+    lib_dir: assets
+    seal: false
+    nature:
+      highlightStyle: dracula
+      countIncrementalSlides: false
+      beforeInit: "macros.js"
+---
+
+
+# Let's practice - Module 3
+
+```{r setup_zz3, include = FALSE}
+source("_setup.R")
+htmltools::tagList(
+  xaringanExtra::use_clipboard(
+    button_text = "<i class=\"fa fa-clipboard\"></i>",
+    success_text = "<i class=\"fa fa-check\" style=\"color: #37abc8\"></i>",
+  ),
+  rmarkdown::html_dependency_font_awesome()
+)
+xaringanExtra::use_scribble()
+```
+
+<!-- rmarkdown::render("_z03_break_out.Rmd") -->
+
+---
+
+# Exercise
+
+## Context
+
+- *The goal of the exercise is to work collaboratively using GitHub to create a CSAS document with `csasdown`*
+
+--
+
+- *By the end of this exercise, you should know how to create a DFO Research Document using `csasdown`, and how to work collaboratively on the document by creating and reviewing pull requests on GitHub.*
+
+---
+
+# Exercise
+
+## Task
+
+.font90[
+**1)** Clone [GitHub repository](https://github.com/inSilecoInc/learning_git_bs3) for the exercise
+
+**2)** Create new branch on repository
+
+**3)** Create child `.Rmd` document, *i.e.* new `.Rmd` document without `YAML` header
+
+**4)** Include a single section (level 1) with the title of your choice using `# Title` and some text and/or code chunk
+
+**5)** Commit and push changes to your branch
+
+**6)** Create and assign pull request to another participant
+]
+
+---
+
+# Exercise
+
+## Task
+
+.font90[
+**7)** Review and merge pull request assigned to you
+
+**8)** Add child documents to `_bookdown.yml` document
+
+**9)** Render Research Document
+
+**10)** Commit and push changes to main branch
+]
