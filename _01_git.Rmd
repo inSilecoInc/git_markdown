@@ -74,8 +74,6 @@ class: inverse, center, middle
 --
 
 ```sh
-$ tree -a -L 1 
-.
 ├── _00_introduction.Rmd
 ├── _01_learning_git.Rmd
 ├── _03_learning_rmarkdown.Rmd
@@ -316,86 +314,11 @@ $ git push -u origin main
 .center[![:scale 100%](img/part3/rem_0.png)]
 
 ---
-# How `r gt()` works
+# How `r gt()` works &#8211; add a remote 
 
 .center[![:scale 100%](img/part3/rem_1.png)]
 
----
-# How `r gt()` works - 1st push
 
-.center[![:scale 100%](img/part3/rem_2.png)]
-
-
-
-
----
-# `r lc()` Let's do this
-
-## Add a remote.
-
-
-
----
-# `r lc()` Let's do this
-
-## Clone and fork
-
-
-### 1. **Clone** 
-
-```sh
-$ git clone git@github.com:inSilecoInc/demogit.git
-#> Cloning into 'demogit'...
-#> remote: Enumerating objects: 3, done.
-#> remote: Counting objects: 100% (3/3), done.
-#> remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
-#> Receiving objects: 100% (3/3), done.
-```
-
-- `git clone` get a copy of the remote repo (`git`);
-- set up a local branch to track the default remote branch. 
-
---
-
-### 2. **Fork**
-
-- Copy a `r gh()` repository on one of your `r gh()` account.
-
-`r tr()` More on this [next session](_04_rmarkdown.html)!
-
-???
-delete add re-initiate proj1 with a readme and a .gitignore for clone
-then do a fork and then a clone
-
-
----
-# Using several remotes
-
-### `r nf()` I set up 3 remotes for one of our repo 
-
-https://github.com/inSilecoInc/demogit
-
-```sh
-$ git remote -vv
-#> mirror	git@gitlab.com:KevCaz/demogit.git (fetch)
-#> mirror	git@gitlab.com:KevCaz/demogit.git (push)
-#> mirror2	git@raspberrypi.local:/srv/git/demogit.git (fetch)
-#> mirror2	git@raspberrypi.local:/srv/git/demogit.git (push)
-#> origin	git@github.com:inSilecoInc/demogit.git (fetch)
-#> origin	git@github.com:inSilecoInc/demogit.git (push)
-```
-
-
-
-
-
----
-
-class: inverse, center, middle
-
-# Fetch, pull & push
-
-![:custom_hr]()
 
 ---
 # Fetch, pull & push
@@ -409,52 +332,23 @@ class: inverse, center, middle
 
 
 ---
-# Fetch
+# How `r gt()` works &#8211; add a remote 
 
-### Download missing refs and objects
-
-```sh
-$ git fetch
-```
-
---
-
-```sh
-$ git fetch origin
-```
-
---
-
-```sh
-$ git fetch --all
-```
-
-
-
+.center[![:scale 100%](img/part3/rem_1.png)]
 
 
 ---
-# Pull 
+# How `r gt()` works &#8211; first push
 
-
-```sh
-$ git pull
-#> [...]
-```
+.center[![:scale 100%](img/part3/rem_2.png)]
 
 --
 
-
-## Fetch + merge
+### Locally a remote branch is added
 
 --
 
-```sh
-$ git fetch
-#> [...]
-$ git merge origin/main
-#> [...]
-```
+### That's what is done with `git clone`
 
 
 ---
@@ -463,150 +357,45 @@ $ git merge origin/main
 .center[![:scale 100%](img/part3/rem_3.png)]
 
 ---
-# How `r gt()` works
+# How `r gt()` works &#8211; fetch
 
 .center[![:scale 100%](img/part3/rem_4.png)]
 
 ---
-# How `r gt()` works
+# How `r gt()` works &#8211; merge
 
 .center[![:scale 100%](img/part3/rem_5.png)]
 
+--
 
-
-
+### fetch + merge = pull
 
 ---
-# Push 
-
-
-
-```sh
-$ git push
-#> [...]
-```
-
---
-
---
-
-```sh
-$ git push <option> <repo> <branch>
-#> [...]
-```
-
---
-
-```sh
-$ git push origin -d topicA
-#> [...]
-```
-
-- to delete a remote branch
-
-
-
----
-# How `r gt()` works
+# How `r gt()` works &#8211; another push
 
 .center[![:scale 100%](img/part3/rem_6.png)]
 
 ---
-# How `r gt()` works
+# How `r gt()` works &#8211; another push
 
 .center[![:scale 100%](img/part3/rem_7.png)]
 
 
 
 
----
 
-class: inverse, center, middle
-
-# Remote branches
-
-![:custom_hr]()
-
-## `r gh()`
-
-
----
-# Add a new branch to the remote
-
-
-```sh
-$ git switch -c topicC
-[...]
-```
-
---
-
-```sh
-$ git push
-#> fatal: The current branch topicC has no upstream branch.
-#> To push the current branch and set the remote as upstream, use
-#> 
-#>    git push --set-upstream origin topicC
-```
-
---
-
-```sh
-$ git push -u origin topicC
-#> Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
-#> To raspberrypi.local:/srv/git/coolio.git
-#>  * [new branch]      topicC -> topicC
-#> Branch 'topicC' set up to track remote branch 'topicC' from 'origin'.
-```
-
----
-# How `r gt()` works
-
-.center[![:scale 100%](img/part3/rem_8.png)]
-
----
-# How `r gt()` works
-
-.center[![:scale 100%](img/part3/rem_9.png)]
-
----
-# Track a remote branch  
-
-
-```sh
-$ git checkout --track origin/topicA 
-```
-
---
-
-```sh
-$ git switch -t topicA
-#> Branch 'topicA' set up to track remote branch 'topicA' from 'origin'.
-#> Switched to a new branch 'topicA'
-```
-
---
-
-```sh
-$ git switch topicA
-#> Branch 'topicA' set up to track remote branch 'topicA' from 'origin'.
-#> Switched to a new branch 'topicA'
-```
-
-???
-and with -c it can be renamed.
 
 
 
 ---
-# `r lc()` Let's do this 
- 
-### 3 pieces of advice 
+# `r lc()` Let's do this
 
-- Branch a lot,
-- Use the main/master branch as the sync branch,
+## Add a remote, push and pull
+
+## 2 pieces of advice
+
+- Give `git remote` a try (e.g. `git remote -vv`)
 - Keep this in mind `r ar()` https://ndpsoftware.com/git-cheatsheet.html#loc=index.
-
 
 
 
