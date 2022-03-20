@@ -31,26 +31,9 @@ xaringanExtra::use_scribble()
 
 
 ---
-# Prerequisites: `r gt()` & `r gh()`
+# Prerequisites: 
 
-
-## `r gt()` installed
-
-
-```{bash}
-git --version
-```
-
---
-
-## Access to a GitHub `r gh()` account 
-
-- Sign up on https://github.com, then go to https://docs.github.com/en/get-started
-
----
-# Prerequisites: pandoc & <img src="https://github.com/rstudio/rmarkdown/raw/main/man/figures/logo.png" style="vertical-align: middle;margin:10px" width="40px"></img>
-
-##  Pandoc
+## Pandoc
 
 ```{bash, eval=FALSE}
 pandoc --version
@@ -58,6 +41,29 @@ pandoc --version
 ```
 
 .font80[`r nf()` Installed with `r rp()` Studio, otherwise go [here](https://pandoc.org/installing.html) for installation info]
+
+--
+
+## <img src="https://github.com/rstudio/rmarkdown/raw/main/man/figures/logo.png" style="vertical-align: middle;margin:10px" width="40px"></img> rmarkdown installed
+
+.font90[
+```{r eval=FALSE}
+# Install from CRAN
+install.packages('rmarkdown')
+```
+]
+
+--
+
+## <img src="https://yihui.org/images/logo-tinytex.png" style="vertical-align: middle;margin:10px" width="40px"></img> TinyTex 
+
+.font90[
+```{r eval = FALSE}
+install.packages("tinytex")
+tinytex::install_tinytex()
+```
+]
+
 
 
 --

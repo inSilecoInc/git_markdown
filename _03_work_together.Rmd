@@ -28,9 +28,206 @@ xaringanExtra::use_scribble()
 
 # Working collaboratively with GitHub `r gh()`
 
+- Add collaborator 
+
+- Clone / fork
+
 - Use Branches! 
 
 - Define a workflow
+
+
+
+
+---
+class: inverse, center, middle
+
+# Accessing and modifying repositories
+
+![:custom_hr]()
+
+## `r gh()`
+
+
+
+---
+#  How to access repositories on `r gh()`
+
+.pull-left[
+## `git fork`
+
+Copy any public repository to your `r gh()` account or organization without making changes to the upstream repository
+
+.font80[`r nf()` Issues, branches, pull requests and other `r gh()` features will not be copied]
+]
+
+.pull-right[
+## `git clone` 
+]
+
+---
+#  How to access repositories on `r gh()`
+
+.pull-left[
+## `git fork`
+
+Copy any public repository to your `r gh()` account or organization without making changes to the upstream repository
+
+.font80[`r nf()` Issues, branches, pull requests and other `r gh()` features will not be copied]
+]
+
+.pull-right[
+## `git clone` 
+
+Create a local copy of a `r gh()` remote repo from:
+ 
+- your account
+- another user
+- `r gh()` organizations
+
+]
+
+---
+#  Committing changes to a `r gh()` repository
+
+.pull-left[
+## `git fork`
+
+- Fork repo 
+- Make changes 
+- Submit a *Pull request* .font80[(next session)]
+]
+
+.pull-right[
+## `git clone` 
+]
+
+---
+#  Committing changes to a `r gh()` repository
+
+.pull-left[
+## `git fork`
+
+- Fork repo 
+- Make changes 
+- Submit a *Pull request* .font80[(next session)]
+]
+
+.pull-right[
+## `git clone` 
+
+- Clone repo 
+- Make changes 
+- Push / merge changes
+
+.font80[`r nf()` Consider using *Pull requests* when collaborating on a repo (next session)]
+
+.font80[`r nf()` must be a collaborator or organization member to push commits to a repo you do not own]
+]
+
+
+
+---
+#  Should I clone or should I fork?
+
+
+.pull-left[
+## `git fork`
+
+- Begin a project from an existing public `r gh()` repo 
+- Propose changes to someone else's project
+- Continue a project without affecting the upstream repo
+]
+
+.pull-right[
+## `git clone` 
+]
+
+---
+#  Should I clone or should I fork?
+
+
+.pull-left[
+## `git fork`
+
+- Begin a project from an existing public `r gh()` repo 
+- Propose changes to someone else's project
+- Continue a project without affecting the upstream repo
+]
+
+.pull-right[
+## `git clone` 
+
+- Get a local copy of your `r gh()` repo 
+- Actively collaborate on a projects
+
+.font80[`r tr()` Cloning is still required if forking a `r gh()` repo]
+]
+
+--
+
+.font80[`r nf()` See [here](https://www.geeksforgeeks.org/difference-between-fork-and-clone-in-github/) and [here](https://www.theserverside.com/answer/Git-fork-vs-clone-Whats-the-difference) for more on the difference between forking and cloning]
+
+---
+# Forking vs cloning: what's happening?
+
+<center><img src="img/part4/fc1.png" style="vertical-align: middle;margin:10px" width="325px"></img></center>
+
+---
+# Forking vs cloning: what's happening?
+
+<center><img src="img/part4/fc2.png" style="vertical-align: middle;margin:10px" width="325px"></img></center>
+
+
+---
+# Forking
+
+- Go to the `r gh()` repo you wish to fork and click on `Fork` .font70[(top-right)]
+
+<center><img src="img/part4/fork.png" style="vertical-align: middle;margin:10px" width="500px"></img></center>
+
+--
+
+- Navigate to your profile to get the newly forked repo's URL
+
+<center><img src="img/part4/clone.png" style="vertical-align: middle;margin:10px" width="250"></img></center>
+
+--
+
+- Clone the forked `r gh()` repository using your preferred protocol .font70[(coming up!)]
+
+---
+# Cloning 
+
+```sh
+$ git clone <repo>
+```
+
+---
+# Adding collaborators 
+
+- Navigate to your `r gh()` settings 
+- Go to `Collaborators`
+- Click on `Add people` to invite collaborators
+
+<center><img src="img/part4/collaborator.png" style="vertical-align: middle;margin:10px" width="800px"></img></center>
+ 
+
+---
+# `r lc()` Let's do this
+
+## Fork a repository
+
+## Clone a repository 
+
+## Add a collaborator
+
+
+
+
+
+
+
 
 
 ---
@@ -194,200 +391,114 @@ now let's use references (refs) for pointers and objects for objets
 
 
 
+---
+
+class: inverse, center, middle
+
+# Remote branches
+
+![:custom_hr]()
+
+## `r gh()`
+
+
+---
+# Add a new branch to the remote
+
+
+```sh
+$ git switch -c topicC
+[...]
+```
+
 --
 
-## <img src="https://github.com/rstudio/rmarkdown/raw/main/man/figures/logo.png" style="vertical-align: middle;margin:10px" width="40px"></img> rmarkdown installed
-
-.font90[
-```{r eval=FALSE}
-# Install from CRAN
-install.packages('rmarkdown')
+```sh
+$ git push
+#> fatal: The current branch topicC has no upstream branch.
+#> To push the current branch and set the remote as upstream, use
+#> 
+#>    git push --set-upstream origin topicC
 ```
-]
 
 --
 
-## <img src="https://yihui.org/images/logo-tinytex.png" style="vertical-align: middle;margin:10px" width="40px"></img> TinyTex 
-
-.font90[
-```{r eval = FALSE}
-install.packages("tinytex")
-tinytex::install_tinytex()
+```sh
+$ git push -u origin topicC
+#> Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+#> To raspberrypi.local:/srv/git/coolio.git
+#>  * [new branch]      topicC -> topicC
+#> Branch 'topicC' set up to track remote branch 'topicC' from 'origin'.
 ```
-]
 
-# Working collaboratively with GitHub `r gh()`
+---
+# How `r gt()` works
+
+.center[![:scale 100%](img/part3/rem_8.png)]
+
+---
+# How `r gt()` works
+
+.center[![:scale 100%](img/part3/rem_9.png)]
+
+---
+# Track a remote branch  
+
+
+```sh
+$ git checkout --track origin/topicA 
+```
+
+--
+
+```sh
+$ git switch -t topicA
+#> Branch 'topicA' set up to track remote branch 'topicA' from 'origin'.
+#> Switched to a new branch 'topicA'
+```
+
+--
+
+```sh
+$ git switch topicA
+#> Branch 'topicA' set up to track remote branch 'topicA' from 'origin'.
+#> Switched to a new branch 'topicA'
+```
+
+???
+and with -c it can be renamed.
+
+
+
+---
+# `r lc()` Let's do this 
+ 
+### 3 pieces of advice 
+
+- Branch a lot,
+- Use the main/master branch as the sync branch,
+- Keep this in mind `r ar()` https://ndpsoftware.com/git-cheatsheet.html#loc=index.
+
+
+
+
 
 
 ---
 
 class: inverse, center, middle
 
-# Creating CSAS reports: csasdown
+# Working collaboratively with GitHub
 
-![:custom_hr]()
+<hr>
 
-[<img src="https://github.com/pbs-assess/csasdown/raw/master/man/figures/csasdown-logo.png" style="vertical-align: middle;margin:10px" width="150px"></img>](https://github.com/pbs-assess/csasdown)
-
-
----
-# `r bk()` The `down` universe
-
-- [`bookdown`](https://bookdown.org/): Write a notebook
-- ***[`csasdown`](https://github.com/pbs-assess/csasdown): Write a CSAS document***
-- [`thesisdown`](https://github.com/ismayc/thesisdown): Write a thesis
-- [`rticles`](https://github.com/rstudio/rticles): Write a scientific article
-- [`posterdown`](https://github.com/brentthorne/posterdown): Create a poster
-- [`xaringan`](https://github.com/yihui/xaringan): Create nice presentation (e.g. this presentation)
-- [`vitae`](https://github.com/mitchelloharawild/vitae): Build a CV
-- [`blogdown`](https://bookdown.org/yihui/blogdown/): Generate a blog
-- [`pkgdown`](https://pkgdown.r-lib.org/): Generate R package documentation
-
----
-# [<img src="https://github.com/pbs-assess/csasdown/raw/master/man/figures/csasdown-logo.png" style="vertical-align: middle;margin:10px" width="50px"></img>](https://github.com/pbs-assess/csasdown) csasdown
-
-
-`csasdown` .font90[v.0.0.10.9000] 
-[`r gh()`](https://github.com/pbs-assess/csasdown) 
-[`r rfa("desktop")`](https://www.dropbox.com/s/7m23mh3yfhk5ah8/csasdown-slides.pdf?dl=1)
-
-```{r echo=FALSE, out.width="100%"}
-knitr::include_graphics("img/part5/csasdown_begins.png")
-```
-
-Developed by Sean Anderson 
-[`r rfa("envelope")`](mailto:sean.anderson@dfo-mpo.gc.ca) 
-[`r rfa("globe-americas")`](https://seananderson.ca/) 
-
-> Reproducible CSAS Reports with R Markdown
-
---
-
-> csasdown is an R package that facilitates generating Canadian Science Advisory Secretariat (CSAS) documents in PDF or Word format using R Markdown and bookdown.
-
---
-
-> csasdown gratefully builds on the work of many others including bookdown, thesisdown, and csas-style by Yihui Xie, Chester Ismay, Nick Solomon, Ben Marwick, Chris Grandin, Andrew Edwards, Matthew Grinnel
-
-
----
-# [<img src="https://github.com/pbs-assess/csasdown/raw/master/man/figures/csasdown-logo.png" style="vertical-align: middle;margin:10px" width="50px"></img>](https://github.com/pbs-assess/csasdown) csasdown
-
-## Install the package 
-
-```{r eval = FALSE}
-install.packages("remotes")
-remotes::install_github("pbs-assess/csasdown")
-```
-
----
-# [<img src="https://github.com/pbs-assess/csasdown/raw/master/man/figures/csasdown-logo.png" style="vertical-align: middle;margin:10px" width="50px"></img>](https://github.com/pbs-assess/csasdown) csasdown
-
-## Create a draft
-
-There are 3 types of documents available 
-
-- Research Document: `csasdown::draft("resdoc")`
-- Technical Report: `csasdown::draft("techreport")`
-- Science Response: `csasdown::draft("sr")`
-
---
-
-.font90[`r nf()` By default, the draft files are added in the current root folder. You can use the argument `create_dir = TRUE` for the draft to be created in a folder entitled `index/`]
-
---
-
-.font90[`r nf()` Each draft contains valuable information included by the authors. Create the drafts and consult the documents!]
-
-
---
-
-```{r eval = FALSE}
-csasdown::draft("techreport")
-```
-
----
-# [<img src="https://github.com/pbs-assess/csasdown/raw/master/man/figures/csasdown-logo.png" style="vertical-align: middle;margin:10px" width="50px"></img>](https://github.com/pbs-assess/csasdown) csasdown
-
-## Create a draft
-
-.pull-left[
-```{r echo=FALSE, out.width="50%"}
-knitr::include_graphics("img/part5/resdoc_draft1.png")
-```
-]
-
-.pull-right[
-- Structure of the resulting document
-]
-
----
-# [<img src="https://github.com/pbs-assess/csasdown/raw/master/man/figures/csasdown-logo.png" style="vertical-align: middle;margin:10px" width="50px"></img>](https://github.com/pbs-assess/csasdown) csasdown
-
-## `index.Rmd`
-
-```{r echo=FALSE, out.width="90%"}
-knitr::include_graphics("img/part5/resdoc_draft2.png")
-```
-
-- Main document for the report 
-- Edit authors, title, abstract, affiliations, etc
-
----
-# [<img src="https://github.com/pbs-assess/csasdown/raw/master/man/figures/csasdown-logo.png" style="vertical-align: middle;margin:10px" width="50px"></img>](https://github.com/pbs-assess/csasdown) csasdown
-
-## Chapters
-
-```{r echo=FALSE, out.width="90%"}
-knitr::include_graphics("img/part5/resdoc_draft3.png")
-```
-
-- One document, or partial document, per chapter
-- Begin chapter with main title formatting `# Title`
-- Add text, figures, tables, etc
-
-.font80[`r tr()` You do not have to follow this logic, as long as the documents are well referenced in `_bookdown.yml` (next slide)]
-
-
----
-# [<img src="https://github.com/pbs-assess/csasdown/raw/master/man/figures/csasdown-logo.png" style="vertical-align: middle;margin:10px" width="50px"></img>](https://github.com/pbs-assess/csasdown) csasdown
-
-## `bookdown.yml`
-
-```{r echo=FALSE, out.width="90%"}
-knitr::include_graphics("img/part5/resdoc_draft4.png")
-```
-
-- Specifies which partial documents and the order in which the documents are included in the final report
-
----
-# [<img src="https://github.com/pbs-assess/csasdown/raw/master/man/figures/csasdown-logo.png" style="vertical-align: middle;margin:10px" width="50px"></img>](https://github.com/pbs-assess/csasdown) csasdown
-
-## Render the CSAS document 
-
-```{r eval = FALSE}
-bookdown::render_book("index.Rmd")
-```
-
----
-# `r lc()` Let's do this
-
-
----
-
-class: inverse, center, middle
-
-# Collaborating on CSAS reports
-
-![:custom_hr]()
-
-## .font400[`r gh()`] [<img src="https://github.com/pbs-assess/csasdown/raw/master/man/figures/csasdown-logo.png" style="vertical-align: top;margin:10px" width="110px"></img>](https://github.com/pbs-assess/csasdown)
+## Collaborative development models 
 
 
 ---
 # Working collaboratively with GitHub
 
-##  Collaborative development models 
+## Collaborative development models 
 
 .pull-left[
 ***Shared repository model***
