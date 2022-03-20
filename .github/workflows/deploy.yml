@@ -42,6 +42,7 @@ jobs:
       
       - name: Build presentation
         run: |-
+          Rscript -e 'icons::download_fontawesome()'
           Rscript build_pres.R
                 
       - name: Deploy workshop 
