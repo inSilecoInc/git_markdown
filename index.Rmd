@@ -121,11 +121,11 @@ class: inverse, center, middle
 
 class: inverse, center, middle
 
-# `r lc()` Part IV
+# Part IV
 
 ![:custom_hr]()
 
-## Practice
+## Practice `r lc()`
 
 ## `r rfa("html5")` [Click here to view the slides.](_04_practice.html)
 
