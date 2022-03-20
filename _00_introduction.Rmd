@@ -97,18 +97,16 @@ xaringanExtra::use_scribble()
 # Learning objectives
 
 
-### Learn about `r gt()`  and `r gh()`
+## 1. Understand how `r gt()` works.
 
 --
 
-### Understand how `r gt()` works
+## 2. Be able to use [<img src="https://raw.githubusercontent.com/rstudio/rmarkdown/main/man/figures/logo.png" style="vertical-align: middle;margin:10px" width="50px"></img>](https://rmarkdown.rstudio.com/)to create dynamic documents.
+
 
 --
 
-### Be able to use `r gt()`  and `r gh()` to collaborate
+## 3. Be capable to use `r gh()` to collaborate on a R (Markdown) project.
 
---
-
-### Use [<img src="https://raw.githubusercontent.com/rstudio/rmarkdown/main/man/figures/logo.png" style="vertical-align: middle;margin:10px" width="50px"></img>](https://rmarkdown.rstudio.com/) to create documents and expose them on `r gh()`
 
 
