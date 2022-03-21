@@ -1,5 +1,5 @@
 ---
-title: "Pull Requests & csasdown"
+title: "Working together"
 output:
   xaringan::moon_reader:
     css: [default, rd.css, rd-font.css, "hygge"]
@@ -46,7 +46,7 @@ class: inverse, center, middle
 
 ![:custom_hr]()
 
-## `r gh()`
+## Working with others on `r gh()`
 
 
 
@@ -241,21 +241,21 @@ class: inverse, center, middle
 
 
 ---
-# Branching
-
-## 1. Branch, branch and branch! 
+# Branch, branch and branch! 
 
 --
 
-## 2. Use `git branch` a lot!
-
-<br>
+### 1. Branch to create divergent history.
 
 --
 
-### - Branching allows you to create divergent history which is exactly what you need for collaboration.
+### 2. Creating a branch is cheap!
 
-### - Branch is cheap.
+--
+
+### 3. **Basic workflow**: Develop on a topic branch, merge it with the master once it's ready then delete it.
+
+
 
 ---
 # Branching
@@ -345,13 +345,12 @@ now let's use references (refs) for pointers and objects for objets
 ---
 # `r lc()` Let's do this 
  
-### 5 pieces of advice 
+### 4 pieces of advice 
 
 - List your branch with `git branch`
 - Use `git status` 
 - Use `git log`
-- Keep this in mind `r ar()` https://ndpsoftware.com/git-cheatsheet.html#loc=index.
-- Once a branch is merges, delete it `git branch -d topicA`
+- Once a branch is merged, delete it `git branch -d topicA`
 
 
 
@@ -384,8 +383,6 @@ now let's use references (refs) for pointers and objects for objets
 ---
 # `r lc()` Let's do this 
 
-## Rebase a branch. 
-
 
 
 
@@ -414,16 +411,6 @@ $ git switch -c topicC
 --
 
 ```sh
-$ git push
-#> fatal: The current branch topicC has no upstream branch.
-#> To push the current branch and set the remote as upstream, use
-#> 
-#>    git push --set-upstream origin topicC
-```
-
---
-
-```sh
 $ git push -u origin topicC
 #> Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
 #> To raspberrypi.local:/srv/git/coolio.git
@@ -442,43 +429,16 @@ $ git push -u origin topicC
 .center[![:scale 100%](img/part3/rem_9.png)]
 
 ---
-# Track a remote branch  
-
-
-```sh
-$ git checkout --track origin/topicA 
-```
-
---
+# Track a remote branch
 
 ```sh
-$ git switch -t topicA
-#> Branch 'topicA' set up to track remote branch 'topicA' from 'origin'.
-#> Switched to a new branch 'topicA'
+$ git switch -t topicC
 ```
-
---
-
-```sh
-$ git switch topicA
-#> Branch 'topicA' set up to track remote branch 'topicA' from 'origin'.
-#> Switched to a new branch 'topicA'
-```
-
-???
-and with -c it can be renamed.
-
 
 
 ---
 # `r lc()` Let's do this 
  
-### 3 pieces of advice 
-
-- Branch a lot,
-- Use the main/master branch as the sync branch,
-- Keep this in mind `r ar()` https://ndpsoftware.com/git-cheatsheet.html#loc=index.
-
 
 
 
