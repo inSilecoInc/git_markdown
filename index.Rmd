@@ -1,7 +1,7 @@
 ---
-title: "Collaborate more"
+title: "Git & R Markdown"
 author: "inSileco Team"
-date: 2021-12-20
+date: 2022-03-20
 output:
   xaringan::moon_reader:
     css: [default, rd.css, rd-font.css, "hygge"]
@@ -57,7 +57,7 @@ class: title-slide, middle
 
 .instructors[
 
-[![pages-build-deployment](https://github.com/inSilecoInc/learning_git/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/inSilecoInc/learning_git/actions/workflows/pages/pages-build-deployment)
+[![Render and deploy workshop](https://github.com/inSilecoInc/git_markdown/actions/workflows/deploy.yml/badge.svg)](https://github.com/inSilecoInc/git_markdown/actions/workflows/deploy.yml)
 
 Content under [`r rfa("creative-commons")` `r rfa("creative-commons-by")`](https://creativecommons.org/licenses/by/4.0/) unless otherwise specified.]
 

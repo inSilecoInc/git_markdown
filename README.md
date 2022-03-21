@@ -1,5 +1,7 @@
 # CWS Git/Github & R Markdown workshop
 
+[![Render and deploy workshop](https://github.com/inSilecoInc/git_markdown/actions/workflows/deploy.yml/badge.svg)](https://github.com/inSilecoInc/git_markdown/actions/workflows/deploy.yml)
+
 ```{R}
 install.packages("remotes")
 remotes::install_github("iseWorkshops")
