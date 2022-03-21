@@ -1,6 +1,3 @@
-# icons ready 
-icons::download_fontawesome()
-
 parts = c(
   "_00_introduction.Rmd", 
   "_01_git.Rmd",

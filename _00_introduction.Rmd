@@ -37,6 +37,7 @@ xaringanExtra::use_scribble()
 
 
 
+
 ---
 # Sharing code
 
@@ -66,23 +67,26 @@ xaringanExtra::use_scribble()
 # `r gt()` in a nutshell 
 
 
-### - `r gt()` is a fully distributed version control system
+--
+
+### - `r gt()` is a fantastic tool to version your code and share it (e.g. on `r gh()`),
 
 --
 
-### - `r gt()` was originally developed by developers of the Linux kernel to [develop the kernel](https://github.com/torvalds/linux)
+### - `r gt()` was originally developed to [develop the kernel](https://github.com/torvalds/linux),
 
 --
 
-### - 01/06 v1.0; 05/14 v2.0; 01/22 [v2.35](https://github.blog/2022-01-24-highlights-from-git-2-35/)
+### - `r rfa("tag")` 01/2006 v1.0 ; `r rfa("tag")` 05/14 v2.0 ; `r rfa("tag")` 01/22 [v2.35](https://github.blog/2022-01-24-highlights-from-git-2-35/),
 
 --
 
-### - `r gt()` is fast and allow for non-linear develop via a killer branching system.
+### - `r gt()` creates snapshots of a file system called "commits" stored in a local database `.git` that can be shared,
 
 --
 
-### - `r gt()` creates snapshots of a file system ("commits") stored in a local database `.git` that can be shared.
+### - `r gt()` allows for non-linear develop via a killer branching system.
+
 
 
 ---
@@ -106,7 +110,7 @@ xaringanExtra::use_scribble()
 
 --
 
-## 3. Be capable to use `r gh()` to collaborate on a R (Markdown) project.
+## 3. Be capable to use `r gh()` to collaborate on R or R Markdown projects.
 
 
 
