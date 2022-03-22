@@ -14,7 +14,7 @@ output:
 
 <!-- rmarkdown::render("_05_github_pages.Rmd") -->
 
-```{r setup_05, include = FALSE}
+```{r setup_06, include = FALSE}
 source("_setup.R")
 # knitr::clean_cache(TRUE)
 htmltools::tagList(
