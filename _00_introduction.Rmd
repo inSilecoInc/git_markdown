@@ -40,11 +40,6 @@ xaringanExtra::use_scribble()
 ## Need tools to do so!
 
 
----
-# Writing dynamic documents
-
-
-
 
 ---
 # Sharing code
@@ -97,7 +92,31 @@ xaringanExtra::use_scribble()
 
 --
 
-## - `r gt()` is super fast, has integrity, and has tons of great features.
+### - `r gt()` is super fast, has integrity, and has tons of great features.
+
+
+---
+# Writing dynamic documents
+
+--
+
+### - Automated workflows 
+
+--
+
+### - Code and text live together 
+
+--
+
+### - Results, figures, reports dynamically generated
+
+--
+
+### - Increases reproducibility (!!) compared to the good ol' *copy & paste* approach
+
+--
+
+### - Markdown is a widely used, flexible, and simplified markup language
 
 
 ---
@@ -105,7 +124,23 @@ xaringanExtra::use_scribble()
 
 --
 
-### - Combines R and Markdown to create dynamic document
+### - Combines R and Markdown to create dynamic documents
+
+--
+
+### - Stands on the shoulders of `knitr` and `Pandoc`
+
+--
+
+### - `knitr` exexutes code and converts R Markdown to Markdown
+
+--
+
+### - `Pandoc` renders the document in a variety of formats
+
+--
+
+### - *Highly* custmoizable to generate a wide variety of outputs
 
 
 ---
@@ -121,7 +156,7 @@ xaringanExtra::use_scribble()
 
 --
 
-## 3. Be capable to use `r gh()` to collaborate on R or R Markdown projects.
+## 3. Be able to use `r gh()` to collaborate on R or R Markdown projects.
 
 
 
