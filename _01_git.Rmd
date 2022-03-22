@@ -164,12 +164,15 @@ class: inverse, center, middle
  
 ### 2 pieces of advice 
 
+- Check this out `r ar()` https://ndpsoftware.com/git-cheatsheet.html#loc=index
 - Use `git status` 
-- Keep this in mind `r ar()` https://ndpsoftware.com/git-cheatsheet.html#loc=index.
+
 
 
 ---
 # How to create a good commit?
+
+--
 
 ### Hard to say! 
 
@@ -235,7 +238,7 @@ class: inverse, center, middle
 ---
 # `r gt()` servers
 
-## Sync repos via https or ssh
+## Sync `.git` via https or ssh
 
 
 --
@@ -267,36 +270,30 @@ class: inverse, center, middle
 
 .center[![:scale 100%](img/part3/rem_1.png)]
 
-- `git remote add`
+--
+
+- `git remote add remotename remoteURL`
 
 
 ---
-# Sync your repositories
+# Interact with the remote repository
 
 ### Push
 
 > git-push - Update remote refs along with associated objects
 
 
-### Fetch & pull
-
-> git-fetch - Download objects and refs from another repository
-
-> git-pull - Fetch from and integrate with another repository or a local
-       branch
-
-???
-git push allows to interact with the remote
-
 
 ---
-# How `r gt()` works &#8211; add a remote 
+# Add a remote 
 
 .center[![:scale 100%](img/part3/rem_1.png)]
 
+- `git remote add remotename remoteURL`
+
 
 ---
-# How `r gt()` works &#8211; first push
+# First push
 
 .center[![:scale 100%](img/part3/rem_2.png)]
 
@@ -310,33 +307,55 @@ git push allows to interact with the remote
 
 
 ---
-# How `r gt()` works
+# One more commit
+
+.center[![:scale 100%](img/part3/rem_6.png)]
+
+---
+# Another push `git push`
+
+.center[![:scale 100%](img/part3/rem_7.png)]
+
+
+---
+# Interact with the remote repository
+
+### Push
+
+> git-push - Update remote refs along with associated objects
+
+--
+
+### Fetch & pull
+
+> git-fetch - Download objects and refs from another repository
+
+> git-pull - Fetch from and integrate with another repository or a local
+       branch
+
+???
+git push allows to interact with the remote
+
+
+---
+# Remote repository is 1 commit ahead
 
 .center[![:scale 100%](img/part3/rem_3.png)]
 
+
 ---
-# How `r gt()` works &#8211; fetch
+# Fetch `git fetch`
 
 .center[![:scale 100%](img/part3/rem_4.png)]
 
 ---
-# How `r gt()` works &#8211; merge
+# Merge `git merge`
 
 .center[![:scale 100%](img/part3/rem_5.png)]
 
 --
 
-## NB: fetch + merge = pull
-
----
-# How `r gt()` works &#8211; another push
-
-.center[![:scale 100%](img/part3/rem_6.png)]
-
----
-# How `r gt()` works &#8211; another push
-
-.center[![:scale 100%](img/part3/rem_7.png)]
+## NB: fetch + merge = pull `git pull`
 
 
 
@@ -385,12 +404,6 @@ git push allows to interact with the remote
 # `r lc()` Let's do this
 
 ## Add a remote, push and pull
-
-## 3 pieces of advice
-
-- Give `git remote` a try (e.g. `git remote -vv`)
-- Keep this in mind `r ar()` https://ndpsoftware.com/git-cheatsheet.html#loc=index.
-
 
 
 

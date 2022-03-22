@@ -26,10 +26,18 @@ xaringanExtra::use_scribble()
 
 # Working reproducibly and collaboratively
 
+--
 
-## Using and sharing code 
+## Using code / Writing dynamic documents
 
-## Writing dynamic documents
+--
+
+## Sharing code / sharing dynamic documents
+
+
+--
+
+## Need tools to do so!
 
 
 ---
@@ -55,7 +63,7 @@ xaringanExtra::use_scribble()
 
 --
 
-### - `r gt()` is (probably) the most popular
+### - `r gt()` is the most popular
 
 --
 
@@ -73,7 +81,7 @@ xaringanExtra::use_scribble()
 
 --
 
-### - `r gt()` was originally developed to [develop the kernel](https://github.com/torvalds/linux),
+### - `r gt()` was originally developed to [develop the Linux kernel](https://github.com/torvalds/linux),
 
 --
 
@@ -85,8 +93,11 @@ xaringanExtra::use_scribble()
 
 --
 
-### - `r gt()` allows for non-linear develop via a killer branching system.
+### - `r gt()` allows for non-linear development via a killer branching system,
 
+--
+
+## - `r gt()` is super fast, has integrity, and has tons of great features.
 
 
 ---
