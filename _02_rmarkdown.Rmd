@@ -645,6 +645,7 @@ class: inverse, center, middle
 ### `r rfa("book")` The `down` universe
 
 - [`bookdown`](https://bookdown.org/): Write a notebook
+- [`csasdown`](https://github.com/pbs-assess/csasdown): Write a CSAS document .font60[([see workshop)](https://www.insileco.io/learning_git/_05_csas.html#1)]
 - [`thesisdown`](https://github.com/ismayc/thesisdown): Write a thesis
 - [`rticles`](https://github.com/rstudio/rticles): Write a scientific article
 - [`posterdown`](https://github.com/brentthorne/posterdown): Create a poster

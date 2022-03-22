@@ -125,7 +125,30 @@ class: inverse, center, middle
 
 ![:custom_hr]()
 
-## Practice `r lc()`
+## Practice working with R Markdown `r lc()`
 
 ## `r rfa("html5")` [Click here to view the slides.](_04_practice.html)
 
+---
+
+class: inverse, center, middle
+
+# Part V
+
+![:custom_hr]()
+
+## Practice working together `r lc()`
+
+<!-- ## `r rfa("html5")` [Click here to view the slides.](_05_practice.html) -->
+## *Coming soon*
+---
+
+class: inverse, center, middle
+
+# Part VI
+
+![:custom_hr]()
+
+## Bonus: turn your repo into a webpage!
+
+## `r rfa("html5")` [Click here to view the slides.](_06_github_pages.html)

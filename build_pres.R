@@ -4,7 +4,8 @@ parts = c(
   "_02_rmarkdown.Rmd",
   "_03_work_together.Rmd",
   "_04_practice.Rmd",
-  "_05_github_pages.Rmd",
+  "_05_practice.Rmd",
+  "_06_github_pages.Rmd",
   "index.Rmd")
 
 for (i in parts) {
