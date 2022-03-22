@@ -12,7 +12,7 @@ output:
 ---
 
 
-<!-- rmarkdown::render("_04_rmarkdown.Rmd") -->
+<!-- rmarkdown::render("_02_rmarkdown.Rmd") -->
 
 ```{r setup_04, include = FALSE}
 source("_setup.R")
@@ -27,259 +27,49 @@ htmltools::tagList(
 xaringanExtra::use_scribble()
 ```
 
-# Accessing and modifying `r gh()` repositories
+class: inverse, center, middle
+
+# Reproducible documents in reproducible workflows
+
+![:custom_hr]()
 
 
 ---
-# Prerequisites: 
+# A reproducible workflow?
 
-## Pandoc
-
-```{bash, eval=FALSE}
-pandoc --version
-#> pandoc 2.11.4
-```
-
-.font80[`r nf()` Installed with `r rp()` Studio, otherwise go [here](https://pandoc.org/installing.html) for installation info]
+`r rfa("video")` Ignasi Bartomeus (2016) [a reproducible workflow](https://www.youtube.com/watch?v=s3JldKoA0zw).
 
 --
 
-## <img src="https://github.com/rstudio/rmarkdown/raw/main/man/figures/logo.png" style="vertical-align: middle;margin:10px" width="40px"></img> rmarkdown installed
+Reproducibility workshop .font70[March 2021] [`r gh()`](https://github.com/inSilecoInc/workshop_reproducibility)
 
-.font90[
-```{r eval=FALSE}
-# Install from CRAN
-install.packages('rmarkdown')
-```
-]
+---
+# Building reproducible workflows
 
---
+<center><img src="img/part4/workflow1.png" style="vertical-align: middle" width="60%"></img></center>
 
-## <img src="https://yihui.org/images/logo-tinytex.png" style="vertical-align: middle;margin:10px" width="40px"></img> TinyTex 
+---
+# Building reproducible workflows
 
-.font90[
-```{r eval = FALSE}
-install.packages("tinytex")
-tinytex::install_tinytex()
-```
-]
+<center><img src="img/part4/workflow2.png" style="vertical-align: middle" width="60%"></img></center>
 
+---
+# Building reproducible workflows
 
+<center><img src="img/part4/workflow3.png" style="vertical-align: middle" width="60%"></img></center>
 
---
-
-##  rmarkdown <img src="https://github.com/rstudio/rmarkdown/raw/main/man/figures/logo.png" style="vertical-align: middle;margin:10px" width="40px"></img> installed
-
-```{r eval=FALSE}
-# Install from CRAN
-install.packages('rmarkdown')
-```
 
 ---
 class: inverse, center, middle
 
-# Accessing and modifying repositories
+# Reproducible & dynamic documents
 
 ![:custom_hr]()
 
-## `r gh()`
-
-
 
 ---
-#  How to access repositories on `r gh()`
 
-.pull-left[
-## `git fork`
-
-Copy any public repository to your `r gh()` account or organization without making changes to the upstream repository
-
-.font80[`r nf()` Issues, branches, pull requests and other `r gh()` features will not be copied]
-]
-
-.pull-right[
-## `git clone` 
-]
-
----
-#  How to access repositories on `r gh()`
-
-.pull-left[
-## `git fork`
-
-Copy any public repository to your `r gh()` account or organization without making changes to the upstream repository
-
-.font80[`r nf()` Issues, branches, pull requests and other `r gh()` features will not be copied]
-]
-
-.pull-right[
-## `git clone` 
-
-Create a local copy of a `r gh()` remote repo from:
- 
-- your account
-- another user
-- `r gh()` organizations
-
-]
-
----
-#  Committing changes to a `r gh()` repository
-
-.pull-left[
-## `git fork`
-
-- Fork repo 
-- Make changes 
-- Submit a *Pull request* .font80[(next session)]
-]
-
-.pull-right[
-## `git clone` 
-]
-
----
-#  Committing changes to a `r gh()` repository
-
-.pull-left[
-## `git fork`
-
-- Fork repo 
-- Make changes 
-- Submit a *Pull request* .font80[(next session)]
-]
-
-.pull-right[
-## `git clone` 
-
-- Clone repo 
-- Make changes 
-- Push / merge changes
-
-.font80[`r nf()` Consider using *Pull requests* when collaborating on a repo (next session)]
-
-.font80[`r nf()` must be a collaborator or organization member to push commits to a repo you do not own]
-]
-
-
-
----
-#  Should I clone or should I fork?
-
-
-.pull-left[
-## `git fork`
-
-- Begin a project from an existing public `r gh()` repo 
-- Propose changes to someone else's project
-- Continue a project without affecting the upstream repo
-]
-
-.pull-right[
-## `git clone` 
-]
-
----
-#  Should I clone or should I fork?
-
-
-.pull-left[
-## `git fork`
-
-- Begin a project from an existing public `r gh()` repo 
-- Propose changes to someone else's project
-- Continue a project without affecting the upstream repo
-]
-
-.pull-right[
-## `git clone` 
-
-- Get a local copy of your `r gh()` repo 
-- Actively collaborate on a projects
-
-.font80[`r tr()` Cloning is still required if forking a `r gh()` repo]
-]
-
---
-
-.font80[`r nf()` See [here](https://www.geeksforgeeks.org/difference-between-fork-and-clone-in-github/) and [here](https://www.theserverside.com/answer/Git-fork-vs-clone-Whats-the-difference) for more on the difference between forking and cloning]
-
----
-# Forking vs cloning: what's happening?
-
-<center><img src="img/part4/fc1.png" style="vertical-align: middle;margin:10px" width="325px"></img></center>
-
----
-# Forking vs cloning: what's happening?
-
-<center><img src="img/part4/fc2.png" style="vertical-align: middle;margin:10px" width="325px"></img></center>
-
-
----
-# Forking
-
-- Go to the `r gh()` repo you wish to fork and click on `Fork` .font70[(top-right)]
-
-<center><img src="img/part4/fork.png" style="vertical-align: middle;margin:10px" width="500px"></img></center>
-
---
-
-- Navigate to your profile to get the newly forked repo's URL
-
-<center><img src="img/part4/clone.png" style="vertical-align: middle;margin:10px" width="250"></img></center>
-
---
-
-- Clone the forked `r gh()` repository using your preferred protocol .font70[(coming up!)]
-
----
-# Cloning 
-
-```sh
-$ git clone <repo>
-```
-
----
-# Adding collaborators 
-
-- Navigate to your `r gh()` settings 
-- Go to `Collaborators`
-- Click on `Add people` to invite collaborators
-
-<center><img src="img/part4/collaborator.png" style="vertical-align: middle;margin:10px" width="800px"></img></center>
- 
-
----
-# `r lc()` Let's do this
-
-## Fork a repository
-
-## Clone a repository 
-
-## Add a collaborator
-
----
-class: inverse, center, middle
-
-# Markdown
-
-![:custom_hr]()
-
-## .font200[`r rfa("markdown")`]
-
-
----
-
-# `r rfa("markdown")` Markdown
-
-## Reproducibility workshop  [`r gh()`](https://github.com/inSilecoInc/workshop_reproducibility)
-
-### March 2021
-
-
----
-
-# `r rfa("markdown")` Markdown
+# Reproducible & dynamic documents
 
 ## Dynamic documents
 
@@ -301,6 +91,16 @@ class: inverse, center, middle
 - Code for analyses and figures
   - `r rfa("r-project")`, Python `r rfa("python")`, Julia, Matlab, C++, ...
   - Forget excel! `r rfa("ban")` `r rfa("file-excel")` .font60[as much as humanly possible]
+
+
+---
+class: inverse, center, middle
+
+# Markdown
+
+![:custom_hr]()
+
+## .font200[`r rfa("markdown")`]
 
 ---
 
@@ -447,7 +247,6 @@ class: inverse, center, middle
 
 
 ---
-
 class: inverse, center, middle
 
 # <img src="https://github.com/rstudio/rmarkdown/raw/main/man/figures/logo.png" style="vertical-align: middle;margin:10px" width="50px"></img> Basic anatomy
@@ -577,7 +376,7 @@ output: pdf_document
 
 ## Document options: additional options
 
-- There is a wide variety of [.font60[**YAML**] options](https://rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf) available
+- There is a wide variety of .font60[**YAML**] options available. Check the [R Markdown book](https://bookdown.org/yihui/rmarkdown/)
 
 .font90[
 ```yaml
@@ -614,113 +413,40 @@ class: inverse, center, middle
 
 ## .font160[`r rfa("markdown")`]
 
----
-
-# `r rfa("markdown")` Text formatting
-
-
-.pull-left[
-.font80[
-```md
-Normal text
-```
-]
-]
-
-.pull-right[
-.font80[Normal text]
-]
-
---
-
-.pull-left[
-.font80[
-```md
-_Italic_ *text*
-```
-]
-]
-
-.pull-right[
-.font80[_Italic_ *text*]
-]
-
---
-
-.pull-left[
-.font80[
-```md
-__Bold__ **text**
-```
-]
-]
-
-.pull-right[
-.font80[__Bold__ **text**]
-]
-
---
-
-.pull-left[
-.font80[
-```md
-***Bold italic*** **_text_**
-```
-]
-]
-
-.pull-right[
-.font80[***Bold italic*** **_text_**]
-]
-
---
-
-.pull-left[
-.font80[
-```md
-~~Strikethrough text~~
-```
-]
-]
-
-.pull-right[
-.font80[~~Strikethrough text~~]
-]
-
-
 
 ---
+# Text 
 
-# `r rfa("markdown")` Document formatting
-
-## Titles
+## [`r rfa("markdown")` Primer <img src="https://github.com/rstudio/rmarkdown/raw/main/man/figures/logo.png" style="vertical-align: middle;margin:10px" width="50px"></img>](#text-primer)
 
 .pull-left[
-.font80[
-```md
-# Header 1
-## Header 2
-### Header 3
-#### Header 4
-##### Header 5
-###### Header 6
-```
-]
+- [Text formatting](#text-formatting)
+- [Headers](#headers)
+- [Paragraph](#paragraph)
+- [Lists](#lists)
+- [Numbered lists](#numbered-lists)
+- [List indentations](#lists-indentations)
+- [New numbered list](#new-numbered-list)
+- [Citations](#citations)
+- [Footnotes](#footnotes)
+- [Images](#images)
+- [Tables](#tables)
 ]
 
 .pull-right[
-.font80[
-# Header 1
-## Header 2
-### Header 3
-#### Header 4
-##### Header 5
-###### Header 6
-]
+- [Text as hyperlink](#text-hyperlink)
+- [Link to external image](#link-external-image)
+- [Image as hyperlink](#image-hyperlink)
+- [Internal link to section](#internal-link)
+- [Mathematical equations & symbols](#math)
+- [Bibliography](#bibliography)
+- [Citations](#citations)
+- [Bibliography style](#style)
+- [Themes](#themes)
+- [Templates](#templates)
 ]
 
 ---
-
 class: inverse, center, middle
 
 #  `r rfa("code")` Code chunks
@@ -838,15 +564,9 @@ We found that Iris virginica had the longest sepal with a mean of `r mean(iris$S
 
 ---
 
-class: inverse, center, middle
-
-# `r rfa("rocket")` Chunk options
-
-<html><div style='float:left'></div><hr color='#ffdd55' style="margin-top: -60px;" size=1px width=720px></html>
-
----
-
 # `r rfa("code")` Code chunk options
+
+## [`r rfa("markdown")` Primer <img src="https://github.com/rstudio/rmarkdown/raw/main/man/figures/logo.png" style="vertical-align: middle;margin:10px" width="50px"></img>](#code-chunk-primer)
 
 
 .pull-left[
@@ -875,6 +595,1019 @@ head(iris)
 ]
 ]
 
+---
+# `r rfa("code")` Code chunk options
+
+Chunk output can be customised with [numerous options](https://yihui.name/knitr/options/):
+
+```{r}
+str(knitr::opts_chunk$get())
+```
+
+---
+
+class: inverse, center, middle
+
+# <img src="https://github.com/rstudio/rmarkdown/raw/main/man/figures/logo.png" style="vertical-align: middle;margin:10px" width="50px"></img> Resources
+
+![:custom_hr]()
+
+---
+# <img src="https://github.com/rstudio/rmarkdown/raw/main/man/figures/logo.png" style="vertical-align: middle;margin:10px" width="50px"></img> Resources
+
+<center><img src="https://bookdown.org/yihui/rmarkdown/images/cover.png" width="30%"></center>
+
+[R Markdown book](https://bookdown.org/yihui/rmarkdown/): your resource on everything R Markdown!
+
+---
+# <img src="https://github.com/rstudio/rmarkdown/raw/main/man/figures/logo.png" style="vertical-align: middle;margin:10px" width="50px"></img> Resources
+
+<center><img src="https://d33wubrfki0l68.cloudfront.net/374f4c769f97c4ded7300d521eb59b24168a7261/c72ad/lesson-images/cheatsheets-1-cheatsheet.png" width="60%"></center>
+
+[R Studio cheatsheet](https://rmarkdown.rstudio.com/lesson-15.HTML)
+
+[Another one!](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf)
+
+---
+# <img src="https://github.com/rstudio/rmarkdown/raw/main/man/figures/logo.png" style="vertical-align: middle;margin:10px" width="50px"></img> Resources
+
+
+### Other resources
+
+- [knitr documentation](https://yihui.org/knitr/)
+- [inSileco web book (fr)](https://kevcaz.insileco.io/Rmarkdowndocfr/)
+- [inSileco reproducibility workshop](https://www.insileco.io/workshop_reproducibility/#89)
+
+---
+# <img src="https://github.com/rstudio/rmarkdown/raw/main/man/figures/logo.png" style="vertical-align: middle;margin:10px" width="50px"></img> Resources
+
+
+### `r rfa("book")` The `down` universe
+
+- [`bookdown`](https://bookdown.org/): Write a notebook
+- [`thesisdown`](https://github.com/ismayc/thesisdown): Write a thesis
+- [`rticles`](https://github.com/rstudio/rticles): Write a scientific article
+- [`posterdown`](https://github.com/brentthorne/posterdown): Create a poster
+- [`xaringan`](https://github.com/yihui/xaringan): Create nice presentation .font60[(like this one)]
+- [`vitae`](https://github.com/mitchelloharawild/vitae): Build a CV
+- [`blogdown`](https://bookdown.org/yihui/blogdown/): Generate a blog
+- [`pkgdown`](https://pkgdown.r-lib.org/): Generate R package documentation
+
+
+---
+
+---
+name: text-primer
+class: inverse, center, middle
+
+# `r rfa("markdown")` Primer <img src="https://github.com/rstudio/rmarkdown/raw/main/man/figures/logo.png" style="vertical-align: middle;margin:10px" width="50px"></img> 
+
+![:custom_hr]()
+
+## Text formatting
+
+
+---
+name: text-formatting 
+# `r rfa("markdown")` Text formatting 
+
+.pull-left[
+.font80[
+```md
+Normal text
+```
+]
+]
+
+.pull-right[
+.font80[Normal text]
+]
+
+.pull-left[
+.font80[
+```md
+_Italic_ *text*
+```
+]
+]
+
+.pull-right[
+.font80[_Italic_ *text*]
+]
+
+.pull-left[
+.font80[
+```md
+__Bold__ **text**
+```
+]
+]
+
+.pull-right[
+.font80[__Bold__ **text**]
+]
+
+.pull-left[
+.font80[
+```md
+***Bold italic*** **_text_**
+```
+]
+]
+
+.pull-right[
+.font80[***Bold italic*** **_text_**]
+]
+
+.pull-left[
+.font80[
+```md
+~~Strikethrough text~~
+```
+]
+]
+
+.pull-right[
+.font80[~~Strikethrough text~~]
+]
+
+
+
+---
+name: headers
+# `r rfa("markdown")` Headers
+
+.pull-left[
+.font80[
+```md
+# Header 1
+## Header 2
+### Header 3
+#### Header 4
+##### Header 5
+###### Header 6
+```
+]
+]
+
+.pull-right[
+.font80[
+# Header 1
+## Header 2
+### Header 3
+#### Header 4
+##### Header 5
+###### Header 6
+]
+]
+
+
+---
+name: paragraph
+# `r rfa("markdown")` Paragraph
+
+
+.pull-left[
+.font80[
+```md
+Add an empty line to add
+
+a paragraph
+```
+]
+]
+
+.pull-right[
+.font80[
+Add an empty line to add
+
+a paragraph
+]
+]
+
+---
+name: lists
+# `r rfa("markdown")` Lists
+
+.font80[To create a list, use the following symbols: `-` or `*` or `+`]
+
+.font80[You must include an empty line between the beginning of the list and the preceding paragraph]
+
+.pull-left[
+.font80[
+```md
+This is a list:
+
+- Element 1
+- Element 2
+- Element 3
+- Element 4
+```
+]
+]
+
+.pull-right[
+.font80[
+This is a list:
+
+- Element 1
+- Element 2
+- Element 3
+- Element 4]
+]
+
+
+---
+name: numbered-lists
+# `r rfa("markdown")` Numbered lists
+
+.font80[To create a numbered list, use a number followed a `.`: `#.`.]
+
+.font80[No matter the order, `r rfa("markdown")` automatically adjusts the list numbers.]
+
+.pull-left[
+.font80[
+```md
+This is a numbered list:
+
+1. Element 1
+2. Element 2
+6. Element 3
+7. Element 4
+```
+]
+]
+
+.pull-right[
+.font80[
+This is a numbered list:
+
+1. Element 1
+2. Element 2
+6. Element 3
+7. Element 4
+]
+]
+
+---
+name: lists-indentations
+# `r rfa("markdown")` List indentations
+
+.font80[To indent elements of your list, use 2 spaces or a tabulation]
+
+.pull-left[
+.font80[
+```md
+This is a numbered list:
+
+1. Element 1
+  - Element 1.1
+  - Element 1.2
+7. Element 2
+  8. Element 2.1
+  9. Element 2.2
+```
+]
+]
+
+.pull-right[
+.font80[
+This is a numbered list:
+
+1. Element 1
+  - Element 1.1
+  - Element 1.2
+7. Element 2
+  8. Element 2.1
+  9. Element 2.2
+]
+]
+
+
+---
+name: new-numbered-list
+# `r rfa("markdown")` New numbered lists
+
+.font80[To start a new numbered list (*i.e.* reinitialize numbers), use the tag `<!-- end -->` with an empty line before and afterthe tag]
+
+.pull-left[
+.font80[
+```md
+This is a numbered list:
+
+1. Element 1
+2. Element 2
+
+<!-- end -->
+
+6. Element 3
+7. Element 4
+```
+]
+]
+
+.pull-right[
+.font80[
+This is a numbered list:
+
+1. Element 1
+2. Element 2
+
+<!-- end -->
+
+6. Element 3
+7. Element 4
+]
+]
+
+---
+name: citations
+# `r rfa("markdown")` Citations
+
+To add citations, use the `>` before the text
+
+```md
+> This is a citation
+
+>> This is also a citation
+```
+
+> This is a citation
+
+>> This is also a citation
+
+---
+name: footnotes
+# `r rfa("markdown")` Footnotes
+
+To add footnotes, use:
+
+1. The tag `[^footnote]` in the text
+2. Description of the footnote anywhere later in the text
+
+```md
+Ecosystem-based management[^ebm] seeks to address systemic management, monitoring and assessment issues for the environment
+
+...
+
+[^ebm]: See Christensen *et al.* 1996 for a detailed description of ecosystem-based management
+```
+
+Ecosystem-based management[^ebm] seeks to address systemic management, monitoring and assessment issues for the environment
+
+...
+
+.font80[^1^See Christensen *et al.* 1996 for a detailed description of ecosystem-based management]
+
+
+---
+name: images
+# `r rfa("markdown")` Images
+
+To insert a figure, use: `![](path_to_figure)`
+
+```md
+![inSileco](img/logo.png)
+```
+
+.pull-left[
+<figure>
+  <img title="inSileco" src="img/logo.png" width="140px"></img>
+  <figcaption>inSileco</figcaption>
+</figure>
+]
+
+
+.pull-right[
+**Issue**:
+
+it is not possible to specify dimensions of figures using `r rfa("markdown")`
+
+**Solutions**:
+
+- [`html`](https://www.w3schools.com/tags/att_img_width.asp) syntax for `r rfa("html5")`
+- [`latex`](https://www.overleaf.com/learn/latex/Inserting_Images) syntax for `r rfa("file-pdf")`
+- Use `r rfa("r-project")` to plot figure as matrix and set dimensions with code chunk options (more on this later)
+]
+
+---
+name: tables
+# `r rfa("markdown")` Tables
+
+The simplest way to make tables in markdown:
+
+- `|` seperates columns
+- `-` identify headers
+- `:` specifies text alignment
+
+.pull-left[
+
+```md
+| Left | Center | Right |
+| :--- | :----: | ----: |
+| 12   | 100    | 1     |
+| 13   | 214    | 43    |
+| 14   | 234    | 10    |
+```
+]
+
+.pull-right[
+| Left | Center | Right |
+| :--- | :----: | ----: |
+| 12   | 100    | 1     |
+| 13   | 214    | 43    |
+| 14   | 234    | 10    |
+]
+
+<br/>
+.font90[For more options, you can create your tables directly using `r rfa("r-project")` and export them in a code chunk using the [`knitr::kable`](https://cran.r-project.org/package=knitr) function and [`kableExtra`](https://cran.r-project.org/package=kableExtra) package.
+
+See this [website](https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html) for more.]
+
+
+---
+name: text-hyperlink
+# `r rfa("markdown")` Text as hyperlink
+
+To insert a hyperlink, use: `[text](url)`
+
+```md
+Click [here](https://rmarkdown.rstudio.com/) to visit the `rmarkdown` website
+```
+
+Click [here](https://rmarkdown.rstudio.com/) to visit the `rmarkdown` website
+
+
+---
+name: link-external-image
+# `r rfa("markdown")` Link to external image
+
+To insert an external image, use: `![](url_to_image)`
+
+```md
+![](https://media.giphy.com/media/MkGyW2cOH7uhO/giphy.gif)
+```
+
+<!-- ![](https://media.giphy.com/media/MkGyW2cOH7uhO/giphy.gif) -->
+
+.font90[
+`r rfa("exclamation-triangle")` Beware that not all graphics can be loaded in a pdf and that images should be loaded locally for pdf documents.
+]
+
+---
+name: image-hyperlink
+# `r rfa("markdown")` Image as hyperlink
+
+To use an image as an external link, use: `[![](url_to_image)](url)`
+
+.font70[
+```md
+[![](https://media.giphy.com/media/MkGyW2cOH7uhO/giphy.gif)](https://www.bloomberg.com/graphics/2020-us-election-results)
+```
+]
+
+<!-- [![](https://media.giphy.com/media/MkGyW2cOH7uhO/giphy.gif)](https://www.bloomberg.com/graphics/2020-us-election-results) -->
+
+---
+name: internal-link
+# `r rfa("markdown")` Internal link to section
+
+To add a link to a text section:
+
+- Add dentifier tag to section with `# Section {#tag}` (can be higher level sections).
+
+```md
+# Introduction {#intro}
+```
+
+- Refer to it in the text using `[text](tag)`
+
+
+```md
+This was discussed in the [introduction](#intro)
+```
+
+---
+name: math
+# `r rfa("markdown")` Mathematical equations and symbols
+
+Mathematical equations and symbols can be incorporated in the text using $L^AT_EX$ [syntax](https://en.wikibooks.org/wiki/LaTeX/Mathematics) and `$` tags.
+
+- Use single `$` for inline equations and symbols: `$math$`
+- Use double `$$` for equation blocks: <code>$$equation block$$ </code>
+
+.pull-left[
+```md
+According to Einstein, mass-energy
+equivalence can be expressed as:
+
+$$E = mc^2$$,
+
+where $E$ is energy, $m$ is mass,
+and $c$ is the speed of light.
+```
+]
+
+.pull-right[
+.font90[
+According to Einstein, mass-energy
+equivalence can be expressed as:
+
+$$E = mc^2$$
+
+where $E$ is energy, $m$ is mass,
+and $c$ is the speed of light.
+]
+]
+
+
+---
+
+class: inverse, center, middle
+
+# `r rfa("markdown")` Primer <img src="https://github.com/rstudio/rmarkdown/raw/main/man/figures/logo.png" style="vertical-align: middle;margin:10px" width="50px"></img> 
+
+![:custom_hr]()
+
+## Bibliography and citations
+
+---
+name: bibliography
+# Bibliography
+
+## Bibliographic files
+
+- Bibliographies are typically included to a `.Rmd` document using an external bibliographic file
+
+--
+
+- *Pandoc* can use a wide variety of [bibliographic files](https://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html#Specifying_a_Bibliography) to manage bibliographies and citations.
+
+--
+
+- For scientific writing, we recommend using a `mybiblio.bib` file in BiBTeX format, which you can export from your favorite reference manager software (*e.g.* [Zotero](https://www.zotero.org/), [`r rfa("mendeley")` Mendeley](https://www.mendeley.com/), [EndNote](https://endnote.com/))
+
+--
+
+- Note that bibliographic metadata can be included in the [YAML header](https://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html#Inline_References). We however do not recommend using this strategy, unless you wish to cite few references.
+
+
+---
+
+# Bibliography
+
+## `.bib` file
+
+```md
+@article{galbraith2012,
+  author = {Galbraith, Peter S. and Larouche, Pierre and Chass{\'e}, Jo{\"e}l and Petrie, Brian},
+  title = {Sea-Surface Temperature in Relation to Air Temperature in the {{Gulf}} of {{St}}. {{Lawrence}}: {{Interdecadal}} Variability and Long Term Trends},
+  journal = {Deep Sea Research Part II: Topical Studies in Oceanography},
+  volume = {77-80},
+  pages = {10--20},
+  year = {2012},
+  doi = {10.1016/j.dsr2.2012.04.001},
+  series = {Satellite {{Oceanography}} and {{Climate Change}}}
+}
+```
+
+- Use the citation key `galbraith2012` for in-text citations (more on this later)
+
+---
+
+# Bibliography
+
+## Include to `.Rmd`
+
+- Include a bibliography to a `.Rmd` in the .font60[**YAML**] header using the `bibliography` option
+
+```yaml
+---
+title: "My document title"
+date: "01-03-2021"
+author: Me, you, them
+output: pdf_document
+bibliography: mybiblio.bib
+---
+```
+
+.font90[
+`r rfa("exclamation-triangle")` Be sure that the path to your `.bib` file is well identified.
+]
+
+
+
+---
+
+# Bibliography
+
+## Placement
+
+- A bibliography will be added at the end of the document by default. Use an appropriate header at the end and you are good to go.
+
+```md
+...that will revolutionize the way we think about science.
+
+# References
+```
+
+- If you wish to include text after the bibliography, such as an appendix, your can use the `<div id="refs"></div>` HTML tag (see [here](https://bookdown.org/yihui/rmarkdown-cookbook/bibliography.html) for more on this):
+
+```md
+...that will revolutionize the way we think about science.
+
+# References
+
+<div id="refs"></div>
+
+# Appendix
+```
+
+---
+name: citations
+# Bibliography
+
+## Citation syntax
+
+- Use citation key with `@` to refer to a reference: `@id`
+
+.pull-left[
+.font80[
+```md
+Cite in parentheses [@galbraith2012].
+```
+]
+]
+
+.pull-right[
+.font80[Cite in parentheses (Galbraith et al. 2012)]
+]
+
+.pull-left[
+.font80[
+```md
+Cite in parentheses [@galbraith2012; @cazelles2018].
+```
+]
+]
+
+.pull-right[
+.font80[Cite in parentheses (Galbraith et al. 2012, Cazelles et al. 2018)]
+]
+
+.pull-left[
+.font80[
+```md
+Cite in parentheses + text [see @galbraith2012 pp. 30].
+```
+]
+]
+
+.pull-right[
+.font80[Cite in parentheses + text (see Galbraith et al. 2012 pp. 30)]
+]
+
+.pull-left[
+.font80[
+```md
+Cite @galbraith2012 in a sentence.
+```
+]
+]
+
+.pull-right[
+.font80[Cite Galbraith et al. (2012) in a sentence.]
+]
+
+
+
+---
+name: style
+# Bibliography
+
+## Styling
+
+- By default, pandoc uses the Chicago author-date format
+- You can use another style by specifying CSL style files with the the `csl` option in the .font60[**YAML**] header.
+- CSL files contain bibliographic and citation formatting informations.
+- There are hundreds of styles available on [GitHub](https://github.com/citation-style-language/styles) and scientific journals often provide their own CSL file.
+
+```yaml
+---
+title: "My document title"
+date: "01-03-2021"
+author: Me, you, them
+output: pdf_document
+bibliography: mybiblio.bib
+csl: mystyle.csl
+---
+```
+
+.font90[
+`r rfa("exclamation-triangle")` Be sure that the path to your `.csl` file is well identified.
+]
+
+
+---
+
+class: inverse, center, middle
+
+# `r rfa("markdown")` Primer <img src="https://github.com/rstudio/rmarkdown/raw/main/man/figures/logo.png" style="vertical-align: middle;margin:10px" width="50px"></img> 
+
+![:custom_hr]()
+
+## Themes & templates
+
+---
+name: themes
+# `r rfa("html5")` Themes
+
+- There are 12 custom themes available in `rmarkdown`, and multiple others available through numerous R packages. See [here](https://www.datadreaming.org/post/r-markdown-theme-gallery/) and [here](https://cran.r-project.org/web/packages/prettydoc/vignettes/tactile.html) for examples.
+
+```yaml
+---
+title: Awesome report
+author: Me, You, Them
+date: 2021-03-01
+output:
+  html_document:
+    theme: lumen
+---
+```
+
+---
+name: templates
+# `r rfa("file-pdf")` Templates
+
+- Specify a LaTeX template `.tex` file to use pre-specified document formatting guidelines. See [here](https://www.overleaf.com/latex/templates) for many templates. Many scientific journals provide LaTeX templates.
+- Download the desired template and refer to it in the .font80[**YAML**] header.
+
+
+```yaml
+---
+title: Awesome report
+author: Me, You, Them
+date: 2021-03-01
+output:
+  pdf_document:
+    template: my_template.tex
+---
+```
+
+
+
+---
+name: code-chunk-primer
+class: inverse, center, middle
+
+# `r rfa("markdown")` Primer <img src="https://github.com/rstudio/rmarkdown/raw/main/man/figures/logo.png" style="vertical-align: middle;margin:10px" width="50px"></img> 
+
+![:custom_hr]()
+
+## Code chunk options
+
+---
+
+# `r rfa("code")` Code chunk options
+
+## Default options
+
+.pull-left[
+
+### `r rfa("code")` Syntax
+
+````md
+```{r}`r ''`
+head(iris)
+```
+````
+
+]
+
+.pull-right[
+
+### `r rfa("file-alt")` Output
+
+```{r}
+head(iris)
+```
+
+]
+
+---
+name: echo
+# `r rfa("code")` Code chunk options
+
+## Option `echo`
+
+.pull-left[
+
+### `r rfa("code")` Syntax
+
+````md
+```{r echo = FALSE}`r ''`
+head(iris)
+```
+````
+
+]
+
+.pull-right[
+
+### `r rfa("file-alt")` Output
+
+```{r echo = FALSE}
+head(iris)
+```
+]
+
+
+- Display results but not code.
+- Useful to present results to people not interested by the code.
+- Use `echo = -1` to hide only the first line of a code chunk.
+
+---
+name: eval
+# `r rfa("code")` Code chunk options
+
+## Option `eval`
+
+
+.pull-left[
+### `r rfa("code")` Syntax
+````md
+```{r eval = FALSE}`r ''`
+head(iris)
+```
+````
+]
+
+.pull-right[
+### `r rfa("file-alt")` Output
+```{r eval = FALSE}
+head(iris)
+```
+]
+
+- Code is not evaluated.
+- Useful to show exemple code.
+- Use `eval = -1` to evaluate every line of a code chunk except the first.
+
+
+---
+name: include
+# `r rfa("code")` Code chunk options
+
+## Option `include`
+
+.pull-left[
+### `r rfa("code")` Syntax
+````md
+```{r include = FALSE}`r ''`
+head(iris)
+```
+````
+]
+
+.pull-right[
+### `r rfa("file-alt")` Output
+```{r include = FALSE}
+head(iris)
+```
+]
+
+- Code is evaluated but no output (code, results and figures) is displayed.
+- Useful in setup options and package installation.
+
+---
+name: results
+# `r rfa("code")` Code chunk options
+
+## Option `results`
+
+
+.pull-left[
+### `r rfa("code")` Syntax
+````md
+```{r results = "hold"}`r ''`
+1 + 1
+2 + 2
+```
+````
+]
+
+.pull-right[
+### `r rfa("file-alt")` Output
+```{r results = "hold"}
+1 + 1
+2 + 2
+```
+]
+
+- Hold all results in a code chunk and display them at the end.
+
+---
+
+# `r rfa("code")` Code chunk options
+
+## Option `results`
+
+.pull-left[
+### `r rfa("code")` Syntax
+````md
+```{r results = "hide"}`r ''`
+1 + 1
+ggplot(data = iris,
+       aes(x = Petal.Length,
+           y = Petal.Width)) +
+  geom_point()
+```
+````
+
+- Hide results but not plots
+
+]
+
+.pull-right[
+### `r rfa("file-alt")` Output
+```{r results = "hide", fig.height=3.5, fig.width=4, fig.retina=3, fig.align='center'}
+1 + 1
+ggplot(data = iris,
+       aes(x = Petal.Length,
+           y = Petal.Width)) +
+  geom_point()
+```
+]
+
+---
+
+# `r rfa("code")` Code chunk options
+
+## Options `fig.height` & `fig.width`
+
+.pull-left[
+### `r rfa("code")` Syntax
+````md
+```{r fig.height = 3,
+      fig.width = 5,}`r ''`
+ggplot(data = iris,
+       aes( x = Sepal.Length,
+            y = Sepal.Width,
+            color = Species)) +
+  geom_point()
+```
+````
+]
+
+
+.pull-right[
+### `r rfa("file-alt")` Output
+```{r fig.height = 3,fig.width = 5,echo = FALSE,dpi = 300}
+ggplot(data = iris,
+       aes(x = Sepal.Length,
+           y = Sepal.Width,
+           color = Species)) +
+  geom_point()
+```
+]
+
+- width and height of the plot in inches
+- Note that options are separated by commas
+
+
+---
+
+# `r rfa("code")` Code chunk options
+
+## Option `fig.cap`
+
+.pull-left[
+### `r rfa("code")` Syntax
+````md
+```{r fig.height = 3,
+      fig.width = 5,
+      fig.cap = 'Awesome figure'}`r ''`
+ggplot(data = iris,
+       aes( x = Sepal.Length,
+            y = Sepal.Width,
+            color = Species)) +
+  geom_point()
+```
+````
+]
+
+
+.pull-right[
+### `r rfa("file-alt")` Output
+```{r fig.height = 3,fig.width = 5,echo = FALSE,dpi = 300,fig.cap = 'Awesome figure'}
+ggplot(data = iris,
+       aes(x = Sepal.Length,
+           y = Sepal.Width,
+           color = Species)) +
+  geom_point()
+```
+]
+
 
 ---
 
@@ -884,10 +1617,10 @@ head(iris)
 
 Option             | Run code | Show code | Output | Plots | Messages | Warnings
 -------------------|:--------:|:---------:|:------:|:-----:|:--------:|:-------:
-`eval = FALSE`     |`r rfa("times")`|         |`r rfa("times")`|`r rfa("times")`|`r rfa("times")`|`r rfa("times")`
-`include = FALSE`  | |`r rfa("times")`|`r rfa("times")`|`r rfa("times")`|`r rfa("times")`|`r rfa("times")`
-`echo = FALSE`     |  |`r rfa("times")`|     |    |      |
-`results = "hide"` |        |        |`r rfa("times")`|     |        |
+[`eval = FALSE`](#eval)     |`r rfa("times")`|         |`r rfa("times")`|`r rfa("times")`|`r rfa("times")`|`r rfa("times")`
+[`include = FALSE`](#include)  | |`r rfa("times")`|`r rfa("times")`|`r rfa("times")`|`r rfa("times")`|`r rfa("times")`
+[`echo = FALSE`](#echo)     |  |`r rfa("times")`|     |    |      |
+[`results = "hide"`](#results) |        |        |`r rfa("times")`|     |        |
 `fig.show = "hide"`|        |       |     | `r rfa("times")`|      |
 `message = FALSE`  |          |           |        |       |`r rfa("times")`|
 `warning = FALSE`  |          |           |        |       |          |`r rfa("times")`
@@ -895,158 +1628,3 @@ Option             | Run code | Show code | Output | Plots | Messages | Warnings
 Table from [R for Data Science](https://r4ds.had.co.nz/r-markdown.html#chunk-options)
 
 ---
-
-# `r rfa("book")` The `down` universe
-
-- [`bookdown`](https://bookdown.org/): Write a notebook
-- [`csasdown`](https://github.com/pbs-assess/csasdown): Write a CSAS document .font60[(next session)]
-- [`thesisdown`](https://github.com/ismayc/thesisdown): Write a thesis
-- [`rticles`](https://github.com/rstudio/rticles): Write a scientific article
-- [`posterdown`](https://github.com/brentthorne/posterdown): Create a poster
-- [`xaringan`](https://github.com/yihui/xaringan): Create nice presentation .font60[(like this one)]
-- [`vitae`](https://github.com/mitchelloharawild/vitae): Build a CV
-- [`blogdown`](https://bookdown.org/yihui/blogdown/): Generate a blog
-- [`pkgdown`](https://pkgdown.r-lib.org/): Generate R package documentation
-
---
-
-***Other resources:***
-
-- [R Markdown book](https://bookdown.org/yihui/rmarkdown/)
-- [knitr documentation](https://yihui.org/knitr/)
-- [inSileco web book (fr)](https://kevcaz.insileco.io/Rmarkdowndocfr/)
-- [inSileco reproducibility workshop](https://www.insileco.io/workshop_reproducibility/#89)
-
----
-# `r lc()` Let's do this
-
-## Create a simple `rmd` document in our repo
-
-## Create html document
-
-```{r echo=FALSE, out.width="100%"}
-knitr::include_graphics("img/part4/rmarkdownflow_html.png")
-```
-
-
----
-class: inverse, center, middle
-
-# GitHub Pages
-
-<html><div style='float:left'></div><hr color='#ffdd55' style="margin-top: -60px;" size=1px width=720px></html>
-
-## Transform your `r gh()` repo into a website
-
----
-# GitHub Pages
-
-GitHub provides a free web hosting services called [GitHub Pages](https://docs.github.com/en/pages) that allows you to turn your `r gh()` repo into websites
-
-> GitHub Pages is a static site hosting service that takes HTML, CSS, and JavaScript files straight from a repository on GitHub, optionally runs the files through a build process, and publishes a website. 
-
----
-# GitHub Pages
-
-There are [multiple advantages](https://medium.com/@cheukting.ho/newbie-tips-5-advantage-of-using-github-pages-for-hosting-35bee4c1ce14) to use GitHub Pages for developpers
-
-- Free 
-- Version control
-- Custom domain 
-- Supports HTTPS
-
---
-
-In our case, it also makes it easy to share and disseminate our research and our work through: 
-
-- [Blogs](https://blog.insileco.io/)
-- [Websites](https://www.insileco.io/)
-- [Books & reports](https://kevcaz.insileco.io/Rmarkdowndocfr/)
-- [Presentations](https://www.insileco.io/learning_git/)
-
----
-# GitHub Pages 
-
-## How to create github page from repository
-
-1. Open a new GitHub repository and activate GitHub pages
-2. Link this new repo to a RStudio project
-3. Add a `.Rmd` document and generate the HTML document (we know that part!)
-4. Declare (`add`) and document (`commit`) the modifications on the repository
-5. Send these modifications with the HTML output on GitHub via RStudio
-
-
----
-# GitHub Pages 
-
-## How to create github page from repository
-
-1. Open a new GitHub repository and ***activate GitHub pages***
-2. Link this new repo to a RStudio project
-3. Add a `.Rmd` document and generate the HTML document (we know that part!)
-4. Declare (`add`) and document (`commit`) the modifications on the repository
-5. Send these modifications with the HTML output on GitHub via RStudio
-
---
-
-`r tr()` exported html must be named `index.html`
-
-
----
-# GitHub Pages 
-
-## Activating GitHub Pages
-
-- Navigate to your `r gh()` settings 
-- Go to `Pages` 
-- Select `main` branch as source
-
-<center><img src="img/part4/ghp1.png" style="vertical-align: middle;margin:10px" width="650px"></img></center>
-
-
----
-
-# GitHub Pages
-
-## Activating GitHub Pages
-
-### Congratulations!
-
-<center><img src="img/part4/ghp2.png" style="vertical-align: middle;margin:10px" width="500px"></img></center>
-
---
-... now be patient & wait few minutes to see the results
-
-```{r echo=FALSE, out.width="35%", fig.align = 'center'}
-knitr::include_graphics("img/part4/ironcat.jpeg")
-```
-
----
-# `r lc()` Let's do this
-
-## Transform our repo into a website
-
-```{r echo=FALSE, out.width="100%"}
-knitr::include_graphics("img/part4/rmarkdownflow_html_github.png")
-```
-
-
----
-# Additional ressources 
-
-*This was a brief intro to GitHub Pages and the possibilities it offers*
-
-***For more:***
-
-- [GitHub Pages documentation page](https://docs.github.com/en/pages)
-- [Jekyll](https://jekyllrb.com/)
-  - [Jekyll & GitHub Pages](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll)
-  - Example: [`r gh()`](https://github.com/jekyll/example) [`r rfa("globe-americas")`](http://jekyll.github.io/example/)
-- [Hugo](https://gohugo.io/)
-  - [GitHub Pages & Hugo](https://gohugo.io/hosting-and-deployment/hosting-on-github/)
-  - Example: [`r gh()`](https://github.com/inSilecoInc/inSilecoInc.github.io) [`r rfa("globe-americas")`](https://www/insileco.io/)
-
-
-
-
-
