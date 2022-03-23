@@ -137,7 +137,7 @@ class: inverse, center, middle
 
 ![:custom_hr]()
 
-## Practice working together `r lc()`
+## `r rfa("html5")` [Click here to view the slides.](_05_practice.html)
 
 <!-- ## `r rfa("html5")` [Click here to view the slides.](_05_practice.html) -->
 ## *Coming soon*

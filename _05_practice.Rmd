@@ -38,11 +38,11 @@ xaringanExtra::use_scribble()
 
 ## Context
 
-- *The goal of the exercise is to work collaboratively using GitHub to create a CSAS document with `csasdown`*
+- *The goal of the exercise is to work collaboratively on a R Markdown document report using GitHub*
 
 --
 
-- *By the end of this exercise, you should know how to create a DFO Research Document using `csasdown`, and how to work collaboratively on the document by creating and reviewing pull requests on GitHub.*
+- *By the end of this exercise, you should know how to fork a repository on GitHub, add collaborators, create branches, and create, assign and merge pull requests. You should also be able to create child R Markdown documents to embed in the main R Markdown report.*
 
 ---
 
@@ -51,17 +51,13 @@ xaringanExtra::use_scribble()
 ## Task
 
 .font90[
-**1)** Clone [GitHub repository](https://github.com/inSilecoInc/learning_git_bs3) for the exercise
+***For a single person:***
 
-**2)** Create new branch on repository
+**1)** Fork [GitHub repository](https://github.com/david-beauchesne/git_rmd)
 
-**3)** Create child `.Rmd` document, *i.e.* new `.Rmd` document without `YAML` header
+**2)** Clone your newly forked repository
 
-**4)** Include a single section (level 1) with the title of your choice using `# Title` and some text and/or code chunk
-
-**5)** Commit and push changes to your branch
-
-**6)** Create and assign pull request to another participant
+**3)** Add everyone as collaborators
 ]
 
 ---
@@ -71,11 +67,33 @@ xaringanExtra::use_scribble()
 ## Task
 
 .font90[
-**7)** Review and merge pull request assigned to you
+***For everyone***
 
-**8)** Add child documents to `_bookdown.yml` document
+**1)** Accept invite and clone repository locally
 
-**9)** Render Research Document
+**2)** Create new branch on repository
 
-**10)** Commit and push changes to main branch
+**3)** Create child `.Rmd` document, *i.e.* new `.Rmd` document without `YAML` header
+
+**4)** Include a single section (level 1) with the title of your choice using `# Title` and some text and/or code chunk
+
+**5)** Add child documents to `index.Rmd` document
+
+**7)** Commit and push changes to your branch
+
+**8)** Create and assign pull request to another team member
+
+**9)** Review and merge pull request assigned to you
+]
+
+---
+
+# Exercise
+
+## Task
+
+.font90[
+***Once the process is completed:***
+
+**1)** Create pull request to merge to upstream repository
 ]

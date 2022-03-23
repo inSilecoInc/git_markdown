@@ -142,5 +142,4 @@ tinytex::install_tinytex()
 
 ## Solution
 
-Load solution file here: [`r rfa("database")`](https://github.com/inSilecoInc/git_markdown/blob/main/exercise1.rmd)
-
+Load solution file here: [`r rfa("database")`](https://github.com/inSilecoInc/git_markdown/blob/main/exercise1.Rmd)
