@@ -253,7 +253,12 @@ class: inverse, center, middle
 
 --
 
-### 3. **Basic workflow**: Develop on a topic branch, merge it with the master once it's ready then delete it.
+### 3. **Basic workflow**: 
+
+- Create a topic branch,
+- develop on a topic branch,
+- merge it with the master once it's ready
+- delete it.
 
 
 
@@ -336,21 +341,17 @@ now let's use references (refs) for pointers and objects for objets
 
 .center[![:scale 90%](img/part2/br2_2.png)]
 
+
+---
+# How `r gt()` works - merge but conflicts!
+
+.center[![:scale 90%](img/part2/br2_2.png)]
+
+
 ---
 # How `r gt()` works - merge commit
 
 .center[![:scale 90%](img/part2/br2_3.png)]
-
-
----
-# `r lc()` Let's do this 
- 
-### 4 pieces of advice 
-
-- List your branch with `git branch`
-- Use `git status` 
-- Use `git log`
-- Once a branch is merged, delete it `git branch -d topicA`
 
 
 
@@ -383,6 +384,13 @@ now let's use references (refs) for pointers and objects for objets
 ---
 # `r lc()` Let's do this 
 
+### 4 pieces of advice 
+
+- List your branch with `git branch`
+- Use `git status` 
+- Use `git log`
+- Once a branch is merged, delete it `git branch -d topicA`
+
 
 
 
@@ -399,40 +407,26 @@ class: inverse, center, middle
 ## `r gh()`
 
 
----
-# Add a new branch to the remote
-
-
-```sh
-$ git switch -c topicC
-[...]
-```
-
---
-
-```sh
-$ git push -u origin topicC
-#> Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
-#> To raspberrypi.local:/srv/git/coolio.git
-#>  * [new branch]      topicC -> topicC
-#> Branch 'topicC' set up to track remote branch 'topicC' from 'origin'.
-```
 
 ---
-# How `r gt()` works
+# New local branch 
 
 .center[![:scale 100%](img/part3/rem_8.png)]
 
 ---
-# How `r gt()` works
+# Add remote branch 
 
 .center[![:scale 100%](img/part3/rem_9.png)]
+
+git push -u origin topicC
 
 ---
 # Track a remote branch
 
 ```sh
 $ git switch -t topicC
+# or
+$ git switch topicC
 ```
 
 
