@@ -1629,3 +1629,25 @@ Option             | Run code | Show code | Output | Plots | Messages | Warnings
 Table from [R for Data Science](https://r4ds.had.co.nz/r-markdown.html#chunk-options)
 
 ---
+
+# `r rfa("code")` Code chunk options
+
+## Global code chunk options
+
+### Setup
+
+You can change the default chunk options for all following chunks in your document.
+
+````md
+```{r include = FALSE}`r ''`
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  cache = TRUE,
+  comment = "#>",
+  fig.width = 6,
+  fig.align = "center"
+)
+```
+````
+
+---

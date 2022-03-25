@@ -95,7 +95,7 @@ Create a local copy of a `r gh()` remote repo from:
 
 - Fork repo 
 - Make changes 
-- Submit a *Pull request* .font80[(next session)]
+- Submit a *Pull request*
 ]
 
 .pull-right[
@@ -110,7 +110,7 @@ Create a local copy of a `r gh()` remote repo from:
 
 - Fork repo 
 - Make changes 
-- Submit a *Pull request* .font80[(next session)]
+- Submit a *Pull request*
 ]
 
 .pull-right[
